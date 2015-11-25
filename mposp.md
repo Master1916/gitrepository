@@ -73,11 +73,9 @@ Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-{
-    "reqTime": "20151125160124",
-    "mobile": "15801376995",
-    "appVersion": "设备名.系统名.系统版本号"
-}
+reqTime: 20151125160124
+mobile: 15801376995
+
 ```
 响应：  
 ```
