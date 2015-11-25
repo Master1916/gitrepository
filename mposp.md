@@ -181,7 +181,7 @@ Content-Length: 100
 请求：  
 ```
 POST /activeAndBindEquip HTTP/1.1
-Host: payment.vcpos.cn
+Host: mposp.21er.tk
 Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
