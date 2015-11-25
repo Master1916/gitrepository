@@ -67,8 +67,8 @@ HTTP/1.1 403 Forbidden
 #### 1\. 通过手机号获取验证码
 请求：  
 ```
-POST /sdk/checkin HTTP/1.1
-Host: payment.vcpos.cn
+POST /sendMobileMessage HTTP/1.1
+Host: mposp.21er.tk
 Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
@@ -113,8 +113,8 @@ Content-Length: 100
 #### 1\. 手机号登录
 请求：  
 ```
-POST /sdk/sale HTTP/1.1
-Host: payment.vcpos.cn
+POST /login HTTP/1.1
+Host: mposp.21er.tk
 Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
@@ -147,8 +147,8 @@ Content-Length: 100
 #### 1\. 通过手机号注册
 请求：  
 ```
-POST /sdk/saleNotify HTTP/1.1
-Host: payment.vcpos.cn
+POST /register HTTP/1.1
+Host: mposp.21er.tk
 Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
@@ -180,7 +180,7 @@ Content-Length: 100
 #### 1\. 激活绑定设备
 请求：  
 ```
-POST /sdk/transStatus HTTP/1.1
+POST /activeAndBindEquip HTTP/1.1
 Host: payment.vcpos.cn
 Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
