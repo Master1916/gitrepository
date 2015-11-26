@@ -92,7 +92,6 @@ Content-Length: 100
    "isSuccess":true,
    "respCode":"SUCCESS",
    "respMsg":"发送验证码成功,注意查收",
-   "idCode":2718, //验证码
    "uuid":"12b4c4af4f20443d8764fcfce9a059a9" //效验每次请求的唯一性
    
 }
@@ -147,7 +146,8 @@ reqTime: "20151125160124"
 mobile: "15801376995"
 password: "123456"
 appVersion: "ios.未知.1.1.813"
-uuid: "12b4c4af4f20443d8764fcfce9a059a9" //效验每次请求的唯一性
+uuid: "12b4c4af4f20443d8764fcfce9a059a9", //效验每次请求的唯一性
+idCode: 1234 //验证码
 
 ```
 响应：  
