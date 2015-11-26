@@ -73,8 +73,8 @@ Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-reqTime: 20151125160124
-mobile: 15801376995
+reqTime: "20151125160124"
+mobile: "15801376995"
 
 ```
 响应：  
@@ -92,17 +92,9 @@ Content-Length: 100
    "isSuccess":true,
    "respCode":"SUCCESS",
    "respMsg":"发送验证码成功,注意查收",
-   "cookie":{
-        "name":"idCode",
-        "value":"193286617aaa4285810d13ac56e0fd61",
-        "comment":null,
-        "domain":null,
-        "maxAge":-1,
-        "path":null,
-        "secure":false,
-        "version":0,
-        "httpOnly":false
-    }
+   "idCode":2718, //验证码
+   "uuid":"12b4c4af4f20443d8764fcfce9a059a9" //效验每次请求的唯一性
+   
 }
 ```
 
@@ -151,12 +143,12 @@ Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-{
-    "reqTime": "20151125160124",
-    "mobile": "张三",
-    "password": "12345",
-    "appVersion": "ios.未知.1.1.813"
-}
+reqTime: "20151125160124"
+mobile: "15801376995"
+password: "123456"
+appVersion: "ios.未知.1.1.813"
+uuid: "12b4c4af4f20443d8764fcfce9a059a9" //效验每次请求的唯一性
+
 ```
 响应：  
 ```
@@ -169,7 +161,10 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
-  
+    "respTime":"20151126184737",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"祝贺您成功注册."
 }
 ```
 
