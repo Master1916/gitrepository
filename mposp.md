@@ -122,7 +122,7 @@ Content-Length: 30
     "loginName": "张珊",
     "password": "123456",
     "position": "117.194778,39.113809",
-    "appVersion": "设备名.系统名.系统版本号"
+    "appVersion": "ios.未知.1.1.813"
 }
 ```
 响应：  
@@ -155,7 +155,7 @@ Content-Length: 30
     "reqTime": "20151125160124",
     "mobile": "张三",
     "password": "12345",
-    "appVersion": "设备名.系统名.系统版本号"
+    "appVersion": "ios.未知.1.1.813"
 }
 ```
 响应：  
@@ -190,7 +190,7 @@ Content-Length: 30
     "mobile": "15801376995",
     "activeCode": "11C718FF1FD14531",
     "product": "mobile_v1",
-    "appVersion": "设备名.系统名.系统版本号"
+    "appVersion": "ios.未知.1.1.813"
 }
 ```
 响应：  
