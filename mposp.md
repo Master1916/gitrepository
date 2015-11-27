@@ -91,8 +91,7 @@ Content-Length: 100
    "respTime":"20151125161740",
    "isSuccess":true,
    "respCode":"SUCCESS",
-   "respMsg":"发送验证码成功,注意查收",
-   "uuid":"12b4c4af4f20443d8764fcfce9a059a9" //效验每次请求的唯一性
+   "respMsg":"发送验证码成功,注意查收"
    
 }
 ```
@@ -146,7 +145,6 @@ reqTime: "20151125160124"
 mobile: "15801376995"
 password: "123456"
 appVersion: "ios.未知.1.1.813"
-uuid: "12b4c4af4f20443d8764fcfce9a059a9", //效验每次请求的唯一性
 idCode: 1234 //验证码
 
 ```
