@@ -30,7 +30,7 @@ curl -X POST \
 ```
 HTTP/1.1 200 OK
 Server: Nginx
-Date: Thu, 09 Apr 2015 11:36:53 GMT
+reqTime: Thu, 09 Apr 2015 11:36:53 GMT
 Content-Type: application/json; charset=utf-8
 Connection: keep-alive
 Cache-Control: no-cache
@@ -69,11 +69,10 @@ HTTP/1.1 403 Forbidden
 ```
 POST /sendMobileMessage HTTP/1.1
 Host: mposp.21er.tk
-Date: Wed, 8 Apr 2015 15:51 GMT
+reqTime: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-reqTime: "20151125160124"
 mobile: "15801376995"
 
 ```
@@ -103,7 +102,7 @@ Content-Length: 100
 ```
 POST /login HTTP/1.1
 Host: mposp.21er.tk
-Date: Wed, 8 Apr 2015 15:51 GMT
+reqTime: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
@@ -137,11 +136,10 @@ Content-Length: 100
 ```
 POST /register HTTP/1.1
 Host: mposp.21er.tk
-Date: Wed, 8 Apr 2015 15:51 GMT
+reqTime: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-reqTime: "20151125160124"
 mobile: "15801376995"
 password: "123456"
 appVersion: "ios.未知.1.1.813"
@@ -173,20 +171,19 @@ Content-Length: 100
 ```
 POST /activeAndBindEquip HTTP/1.1
 Host: mposp.21er.tk
-Date: Wed, 8 Apr 2015 15:51 GMT
+reqTime: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-{
-    "reqTime": "20151125160124",
-    "ksnNo": "5010100000023402",
-    "mobile": "15801376995",
-    "activeCode": "11C718FF1FD14531",
-    "product": "mobile_v1",
-    "appVersion": "ios.未知.1.1.813"
-}
+ksnNo: "5010100000023402"
+mobile: "15801376995"
+activeCode: "11C718FF1FD14531"
+product: "ZFT"
+password: "123456"
+appVersion: "ios.未知.1.1.813"
 ```
-响应：  
+响应： 
+
 ```
 HTTP/1.1 200 OK
 Server: Nginx
@@ -197,6 +194,9 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
-  
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"激活绑定设备成功"
 }
 ```
