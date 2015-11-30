@@ -68,7 +68,7 @@ HTTP/1.1 403 Forbidden
 ```
 POST /sendMobileMessage HTTP/1.1
 Host: mposp.21er.tk
-ReqTime: Wed, 8 Apr 2015 15:51 GMT
+Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
@@ -102,7 +102,7 @@ Content-Length: 100
 ```
 POST /login HTTP/1.1
 Host: mposp.21er.tk
-ReqTime: Wed, 8 Apr 2015 15:51 GMT
+Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
@@ -135,7 +135,7 @@ Content-Length: 100
 ```
 POST /register HTTP/1.1
 Host: mposp.21er.tk
-ReqTime: Wed, 8 Apr 2015 15:51 GMT
+Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
@@ -170,7 +170,7 @@ Content-Length: 100
 ```
 POST /activeAndBindEquip HTTP/1.1
 Host: mposp.21er.tk
-ReqTime: Wed, 8 Apr 2015 15:51 GMT
+Date: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
