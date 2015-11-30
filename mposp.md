@@ -30,7 +30,6 @@ curl -X POST \
 ```
 HTTP/1.1 200 OK
 Server: Nginx
-reqTime: Thu, 09 Apr 2015 11:36:53 GMT
 Content-Type: application/json; charset=utf-8
 Connection: keep-alive
 Cache-Control: no-cache
@@ -69,7 +68,7 @@ HTTP/1.1 403 Forbidden
 ```
 POST /sendMobileMessage HTTP/1.1
 Host: mposp.21er.tk
-reqTime: Wed, 8 Apr 2015 15:51 GMT
+ReqTime: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
@@ -102,12 +101,11 @@ Content-Length: 100
 ```
 POST /login HTTP/1.1
 Host: mposp.21er.tk
-reqTime: Wed, 8 Apr 2015 15:51 GMT
+ReqTime: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 {
-    "reqTime": "20151125160124",
     "loginName": "张珊",
     "password": "123456",
     "position": "117.194778,39.113809",
@@ -136,7 +134,7 @@ Content-Length: 100
 ```
 POST /register HTTP/1.1
 Host: mposp.21er.tk
-reqTime: Wed, 8 Apr 2015 15:51 GMT
+ReqTime: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
@@ -171,7 +169,7 @@ Content-Length: 100
 ```
 POST /activeAndBindEquip HTTP/1.1
 Host: mposp.21er.tk
-reqTime: Wed, 8 Apr 2015 15:51 GMT
+ReqTime: Wed, 8 Apr 2015 15:51 GMT
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
