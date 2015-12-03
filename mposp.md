@@ -58,7 +58,9 @@ HTTP/1.1 403 Forbidden
 | 登录| [/login](#login)                      | urlencoded           | GET      |
 | 注册| [/register](#register)                      | urlencoded           | POST   |
 | 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   |
-
+| 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   |
+| 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   |
+| 账户认证| [/accountAuth](#accountAuth)                      | urlencoded           | POST   |
   
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
@@ -72,7 +74,7 @@ Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-appVersion: "ios.未知.1.1.813",
+appVersion: "ios.未知.1.1.813"
 mobile: "15801376995"
 
 ```
@@ -197,5 +199,117 @@ Content-Length: 100
     "isSuccess":true,
     "respCode":"SUCCESS",
     "respMsg":"激活绑定设备成功"
+}
+```
+
+<a id="realNameAuth"></a>
+### 实名认证  /realNameAuth
+#### 1\. 实名认证
+请求：  
+```
+POST /realNameAuth HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+merchantId: 675519 //商户id,生产环境无需传
+userId: 627816 //商户操作员id,生产环境无需传
+name: "狗剩"
+idNumber: "341225199005063896"
+personal: 图片 //身份证正面照
+personalBack: 图片 //身份证背面照
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"实名认证信息已提交,请耐心等待"
+}
+```
+
+<a id="merchantAuth"></a>
+### 商户认证  /merchantAuth
+#### 1\. 商户认证
+请求：  
+```
+POST /merchantAuth HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+merchantId: 675519 //商户id,生产环境无需传
+companyName: "企业名称"
+regPlace: "经营地址"
+business: 图片 //营业执照照片
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"商户认证信息已提交,请耐心等待"
+}
+```
+
+<a id="accountAuth"></a>
+### 账户认证  /accountAuth
+#### 1\. 账户认证
+请求：  
+```
+POST /accountAuth HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+merchantId: 675519 //商户id,生产环境无需传
+name: ""
+regPlace: "经营地址"
+business: 图片 //营业执照照片
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"商户认证信息已提交,请耐心等待"
 }
 ```
