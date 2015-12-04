@@ -195,6 +195,8 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
+    "merchantId": 62548,
+    "userId": 645254,
     "respTime":"20151130125253",
     "isSuccess":true,
     "respCode":"SUCCESS",
@@ -214,8 +216,8 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
-merchantId: 675519 //商户id,生产环境无需传
-userId: 627816 //商户操作员id,生产环境无需传
+merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
+userId: 627816 //商户操作员id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 name: "狗剩"
 idNumber: "341225199005063896"
 personal: 图片 //身份证正面照
@@ -252,9 +254,10 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
-merchantId: 675519 //商户id,生产环境无需传
+merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 companyName: "企业名称"
 regPlace: "经营地址"
+businessLicense: "营业执照号"
 business: 图片 //营业执照照片
 ```
 
