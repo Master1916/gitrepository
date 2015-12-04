@@ -61,6 +61,7 @@ HTTP/1.1 403 Forbidden
 | 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   |
 | 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   |
 | 账户认证| [/accountAuth](#accountAuth)                      | urlencoded           | POST   |
+| 签名认证| [/signatureAuth](#signatureAuth)                      | urlencoded           | POST   |
   
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
@@ -292,10 +293,12 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
-merchantId: 675519 //商户id,生产环境无需传
-name: ""
-regPlace: "经营地址"
-business: 图片 //营业执照照片
+merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
+name: "账户名称"
+bankName: "银行名称"
+unionBankNo: "联行号"
+accountNo: "银行卡号"
+card: 图片 //银行卡图片
 ```
 
 响应： 
@@ -313,6 +316,41 @@ Content-Length: 100
     "respTime":"20151130125253",
     "isSuccess":true,
     "respCode":"SUCCESS",
-    "respMsg":"商户认证信息已提交,请耐心等待"
+    "respMsg":"账户认证信息已提交,请耐心等待"
+}
+```
+
+<a id="signatureAuth"></a>
+### 签名认证  /signatureAuth
+#### 1\. 签名认证
+请求：  
+```
+POST /signatureAuth HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
+signature: 图片 //签名图片
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"签名认证信息已提交,请耐心等待"
 }
 ```
