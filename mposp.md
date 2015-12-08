@@ -60,6 +60,10 @@ HTTP/1.1 403 Forbidden
 | 签到| [/signin](#signin)                      | urlencoded           | POST   |
 | 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   |
 | 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   |
+| 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   |
+| 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   |
+| 获取18家结算银行| [/bankList](#bankList)                      | urlencoded           | GET   |
+| 绑定/解绑用户银行卡| [/bindBankCard](#bindBankCard)                      | urlencoded           | GET   |
 | 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   |
 | 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   |
 | 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   |
@@ -333,6 +337,206 @@ Content-Length: 100
     "refNo": 1234,
     "authNo": 1234,
     "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"验证成功"
+}
+```
+
+<a id="queryTrans"></a>
+### 查询接口  /queryTrans
+#### 1\. 查询接口
+请求：  
+```
+POST /queryTrans HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+date: "20151201"
+respNo: "1111"
+reqTime: "20151124111059"
+appVersion: "ios.未知.1.1.813"
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+respNo: "111"
+merchantName: "啊啊啊啊"
+merchantNo: "1111"
+terminalNo: "1111"
+appVersion: 
+{
+    "reqNo": 645254,
+    "merchantName": "数目数目",
+    "merchantNo": 111111111,
+    "terminalNo": 22222,
+    "operatorNo": 01,
+    "cardNoWipe": 645***254,
+    "amount": 1234,
+    "currency": "CNY",
+    "issuer": "XX银行",
+    "voucherNo": 2222,
+    "batchNo": 123,
+    "transTime": 20151130125253,
+    "refNo": 1234,
+    "authNo": 1234,
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"验证成功"
+}，
+{
+    "reqNo": 645254,
+    "merchantName": "数目数目",
+    "merchantNo": 111111111,
+    "terminalNo": 22222,
+    "operatorNo": 01,
+    "cardNoWipe": 645***254,
+    "amount": 1234,
+    "currency": "CNY",
+    "issuer": "XX银行",
+    "voucherNo": 2222,
+    "batchNo": 123,
+    "transTime": 20151130125253,
+    "refNo": 1234,
+    "authNo": 1234,
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"验证成功"
+}
+
+```
+
+<a id="bankQuery"></a>
+### 联行号查询  /bankQuery
+#### 1\. 联行号查询
+请求：  
+```
+POST /bankQuery HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+keyWord: "20151124111059"
+reqNo: "111"
+max: "111"
+p: "111"
+reqTime: "20151124111059"
+appVersion: "ios.未知.1.1.813"
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "total": 100,
+    "tip": "",
+    "reqNo": 100,
+    "banks": {[bankDeposit:"2222", unionBankNo: "333"],[bankDeposit:"33", unionBankNo: "444"]},
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"验证成功"
+}
+```
+
+
+<a id="bankList"></a>
+### 获取18家结算银行  /bankList
+#### 1\. 获取18家结算银行
+请求：  
+```
+POST /bankList HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+card : XXXXXX
+reqTime: "20151124111059"
+appVersion: "ios.未知.1.1.813"
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "list": {
+    	[bankName:"2222", bankCode: "333", bankLogoIndex: "333", support: "true"],
+    	[bankName:"4444", bankCode: "555", bankLogoIndex: "666", support: "true"]},
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"验证成功"
+}
+```
+
+
+<a id="bindBankCard"></a>
+### 绑定/解绑用户银行卡  /bindBankCard
+#### 1\. 绑定/解绑用户银行卡
+请求：  
+```
+POST /bindBankCard HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+delete: "false"
+cardId: "XXX"
+bankCard: "XXXX"
+bankAccountName: "XX银行"
+reqTime: "20151124111059"
+appVersion: "ios.未知.1.1.813"
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "bankCard": "XXXX",
+    "bankName": "xx银行",
+    "bankIndex": 11,
+    "card_type": "借记卡",
+    "bankAccountName": XX银行,
     "isSuccess":true,
     "respCode":"SUCCESS",
     "respMsg":"验证成功"
