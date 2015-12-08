@@ -169,8 +169,8 @@ Content-Length: 100
 }
 ```
 <a id="signin"></a>
-### 注册  /signin
-#### 1\. 通过手机号注册
+### 签到  /signin
+#### 1\. 签到
 请求：  
 ```
 POST /signin HTTP/1.1
