@@ -57,6 +57,7 @@ HTTP/1.1 403 Forbidden
 | 获取验证码| [/sendMobileMessage](#sendMobileMessage)                      | urlencoded           | POST   |
 | 登录| [/login](#login)                      | urlencoded           | GET      |
 | 注册| [/register](#register)                      | urlencoded           | POST   |
+| 签到| [/signin](#signin)                      | urlencoded           | POST   |
 | 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   |
 | 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   |
 | 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   |
@@ -166,6 +167,83 @@ Content-Length: 100
     "respCode":"SUCCESS",
     "respMsg":"祝贺您成功注册."
 }
+```
+<a id="signin"></a>
+### 注册  /signin
+#### 1\. 通过手机号注册
+请求：  
+```
+POST /signin HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+{
+    "appVersion":"ios.未知.1.1.813",
+    "product":ZFT,
+    "position":"117.194778,39.113809",
+    "respTime":"20151126184737."
+}
+
+
+```
+响应：  
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+"respTime":"20151207175425",
+"isSuccess":true,
+"respCode":"SUCCESS",
+"respMsg":"签到成功",
+"businessT1":
+	{
+		"isMerchantT1":true,
+		"info":
+			{
+				"status":"1211",
+				"name":"王鹏",
+				"cardTail":"3333",
+				"ksnNo":"7000100000000722",
+				"bluetoothName":"AC041903",
+				"serialType":"0.78",
+				"nextReqNo":11,
+				"feeRate":"0.78"
+			},
+		"key":
+			{
+				"keyType":"3DES",
+				"keyValue":"FCB72240C0F7F0A34B9F7385EC728553",
+				"checkValue":"56BAD632",
+				"isBluetooth":true,
+				"macAddress":"8C:DE:52:48:AD:C2"
+			}
+	},
+"agencyTrade":true,
+"businessT0":
+	{
+		"isMerchantT0":true,
+		"info":
+			{
+				"merchantTradeStatus":"1",
+				"accountD0Status":"1",
+				"reasonType":"1",
+				"failReason":"呜呜呜呜",
+				"merchantFeeRate":"0.5"
+			},
+		"isHoliday":false,
+		"startTime":1449425103000,
+		"endTime":1449497227000
+	}
+}
+
 ```
 
 <a id="activeAndBindEquip"></a>
