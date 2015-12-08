@@ -63,6 +63,7 @@ HTTP/1.1 403 Forbidden
 | 账户认证| [/accountAuth](#accountAuth)                      | urlencoded           | POST   |
 | 签名认证| [/signatureAuth](#signatureAuth)                      | urlencoded           | POST   |
 | 及时付手持身份证半身照认证| [/handIdCardAuth](#handIdCardAuth)                      | urlencoded           | POST   |
+| 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   |
   
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
@@ -390,5 +391,45 @@ Content-Length: 100
     "respCode":"SUCCESS",
     "isOldCard": true/false, //true：t1银行卡在十八家银行之内; false：不在
     "respMsg":"手持身份证半身照认证信息已提交,请耐心等待"
+}
+```
+
+<a id="dzAccountAuth"></a>
+### 及时付账户照认证  /dzAccountAuth
+#### 1\. 及时付账户照认证
+请求：  
+```
+POST /dzAccountAuth HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
+name："张三"
+bankDeposit: "银行注册网点"
+bankName: "开户行名称"
+unionBankNo: "联行号"
+accountNo: "银行卡号" 
+bankCard: 图片 //银行卡图片
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"账户认证信息已提交,请耐心等待"
 }
 ```
