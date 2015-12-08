@@ -258,10 +258,8 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 ksnNo: "5010100000023402"
-mobile: "15801376995"
 activeCode: "11C718FF1FD14531"
 product: "ZFT"
-password: "123456"
 appVersion: "ios.未知.1.1.813"
 ```
 响应： 
@@ -297,8 +295,6 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
-merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
-userId: 627816 //商户操作员id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 name: "狗剩"
 idNumber: "341225199005063896"
 personal: 图片 //身份证正面照
@@ -335,7 +331,6 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
-merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 companyName: "企业名称"
 regPlace: "经营地址"
 businessLicense: "营业执照号"
@@ -373,7 +368,6 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
-merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 name: "账户名称"
 bankName: "银行名称"
 unionBankNo: "联行号"
@@ -412,7 +406,6 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
-merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 signature: 图片 //签名图片
 ```
 
@@ -448,7 +441,6 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
-merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 idCard: 图片 //手持身份证图片
 ```
 
@@ -484,7 +476,6 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
-merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 name："张三"
 bankDeposit: "银行注册网点"
 bankName: "开户行名称"
