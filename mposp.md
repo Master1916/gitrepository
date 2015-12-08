@@ -58,6 +58,8 @@ HTTP/1.1 403 Forbidden
 | 登录| [/login](#login)                      | urlencoded           | GET      |
 | 注册| [/register](#register)                      | urlencoded           | POST   |
 | 签到| [/signin](#signin)                      | urlencoded           | POST   |
+| 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   |
+| 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   |
 | 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   |
 | 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   |
 | 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   |
@@ -246,20 +248,22 @@ Content-Length: 100
 
 ```
 
-<a id="activeAndBindEquip"></a>
-### 激活绑定设备  /activeAndBindEquip
-#### 1\. 激活绑定设备
+<a id="resetPassword"></a>
+### 重置密码  /resetPassword
+#### 1\. 重置密码
 请求：  
 ```
-POST /activeAndBindEquip HTTP/1.1
+POST /resetPassword HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-ksnNo: "5010100000023402"
-activeCode: "11C718FF1FD14531"
+idNumber: "413023199101259999"
+mobile: "15801376995"
+password: "123456"
 product: "ZFT"
+idCode: "5741"
 appVersion: "ios.未知.1.1.813"
 ```
 响应： 
@@ -274,6 +278,100 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
+    "reqNo": 645254,
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"验证成功"
+}
+```
+
+<a id="transStatus"></a>
+### 查询交易状态  /transStatus
+#### 1\. 查询交易状态
+请求：  
+```
+POST /transStatus HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+amount: "11111"
+origTransType: "sale"
+origReqNo: "1111"
+origReqTime: "20151124111059"
+reqNo: "qqq"
+reqTime: "20151124111059"
+appVersion: "ios.未知.1.1.813"
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "reqNo": 645254,
+    "merchantName": "数目数目",
+    "merchantNo": 111111111,
+    "terminalNo": 22222,
+    "operatorNo": 01,
+    "cardNoWipe": 645***254,
+    "amount": 1234,
+    "currency": "CNY",
+    "issuer": "XX银行",
+    "voucherNo": 2222,
+    "batchNo": 123,
+    "transTime": 20151130125253,
+    "refNo": 1234,
+    "authNo": 1234,
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"验证成功"
+}
+```
+
+
+<a id="activeAndBindEquip"></a>
+### 激活绑定设备  /activeAndBindEquip
+#### 1\. 激活绑定设备
+请求：  
+```
+POST /activeAndBindEquip HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+ksnNo: "5010100000023402"
+mobile: "15801376995"
+activeCode: "11C718FF1FD14531"
+product: "ZFT"
+password: "123456"
+appVersion: "ios.未知.1.1.813"
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "merchantId": 62548,
+    "userId": 645254,
     "respTime":"20151130125253",
     "isSuccess":true,
     "respCode":"SUCCESS",
@@ -293,6 +391,8 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
+merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
+userId: 627816 //商户操作员id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 name: "狗剩"
 idNumber: "341225199005063896"
 personal: 图片 //身份证正面照
@@ -329,6 +429,7 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
+merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 companyName: "企业名称"
 regPlace: "经营地址"
 businessLicense: "营业执照号"
@@ -366,6 +467,7 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
+merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 name: "账户名称"
 bankName: "银行名称"
 unionBankNo: "联行号"
@@ -404,6 +506,7 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
+merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 signature: 图片 //签名图片
 ```
 
@@ -439,6 +542,7 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
+merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 idCard: 图片 //手持身份证图片
 ```
 
@@ -474,6 +578,7 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
+merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 name："张三"
 bankDeposit: "银行注册网点"
 bankName: "开户行名称"
