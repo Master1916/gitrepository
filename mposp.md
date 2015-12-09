@@ -52,31 +52,31 @@ HTTP/1.1 403 Forbidden
 ```
 
 ## 功能路径列表
-| 资源名称     | 路径                                     | Content-Type         | 请求方式     | 维护人|
+| 资源名称     | 路径                                     | Content-Type         | 请求方式     |
 |-------------|-----------------------------------------|----------------------|---------------|
-| 获取验证码| [/sendMobileMessage](#sendMobileMessage)                      | urlencoded           | POST   | 张树彬|
-| 登录| [/login](#login)                      | urlencoded           | GET      | 武坤萌|
-| 注册| [/register](#register)                      | urlencoded           | POST   | 李飞|
-| 签到| [/signin](#signin)                      | urlencoded           | POST   | 李飞|
-| 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   | 李飞|
-| 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   | 李飞|
-| 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   | 李飞|
-| 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   | 李飞|
-| 获取18家结算银行| [/bankList](#bankList)                      | urlencoded           | GET   | 李飞|
-| 绑定/解绑用户银行卡| [/bindBankCard](#bindBankCard)                      | urlencoded           | GET   | 李飞|
-| 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   | 张树彬|
-| 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   | 张树彬|
-| 实名认证信息灰显| [/realNameAuthStatus](#realNameAuthStatus)                      | urlencoded           | GET   | 张树彬|
-| 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   | 张树彬|
-| 商户认证信息灰显| [/merchantAuthStatus](#merchantAuthStatus)                      | urlencoded           | GET   | 张树彬|
-| 账户认证| [/accountAuth](#accountAuth)                      | urlencoded           | POST   | 张树彬|
-| 账户认证信息灰显| [/accountAuthStatus](#accountAuthStatus)                      | urlencoded           | GET   | 张树彬|
-| 签名认证| [/signatureAuth](#signatureAuth)                      | urlencoded           | POST   | 张树彬|
-| 签名认证信息灰显| [/signatureAuthStatus](#signatureAuthStatus)                      | urlencoded           | GET   | 张树彬|
-| 及时付身份证认证| [/handIdCardAuth](#handIdCardAuth)                      | urlencoded           | POST   | 张树彬|
-| 及时付身份证认证灰显| [/handIdCardAuthStatus](#handIdCardAuthStatus)                      | urlencoded           | GET   | 张树彬|
-| 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   | 张树彬|
-| 及时付账户认证信息灰显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded           | GET   | 张树彬|
+| 获取验证码| [/sendMobileMessage](#sendMobileMessage)                      | urlencoded           | POST   |
+| 登录| [/login](#login)                      | urlencoded           | GET      |
+| 注册| [/register](#register)                      | urlencoded           | POST   | 
+| 签到| [/signin](#signin)                      | urlencoded           | POST   |
+| 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   |
+| 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   |
+| 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   |
+| 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   |
+| 获取18家结算银行| [/bankList](#bankList)                      | urlencoded           | GET   |
+| 绑定/解绑用户银行卡| [/bindBankCard](#bindBankCard)                      | urlencoded           | GET   |
+| 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   |
+| 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   |
+| 实名认证信息灰显| [/realNameAuthStatus](#realNameAuthStatus)                      | urlencoded           | GET   |
+| 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   |
+| 商户认证信息灰显| [/merchantAuthStatus](#merchantAuthStatus)                      | urlencoded           | GET   |
+| 账户认证| [/accountAuth](#accountAuth)                      | urlencoded           | POST   |
+| 账户认证信息灰显| [/accountAuthStatus](#accountAuthStatus)                      | urlencoded           | GET   |
+| 签名认证| [/signatureAuth](#signatureAuth)                      | urlencoded           | POST   |
+| 签名认证信息灰显| [/signatureAuthStatus](#signatureAuthStatus)                      | urlencoded           | GET   |
+| 及时付身份证认证| [/handIdCardAuth](#handIdCardAuth)                      | urlencoded           | POST   |
+| 及时付身份证认证灰显| [/handIdCardAuthStatus](#handIdCardAuthStatus)                      | urlencoded           | GET   |
+| 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   |
+| 及时付账户认证信息灰显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded           | GET   |
   
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
