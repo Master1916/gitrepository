@@ -77,6 +77,7 @@ HTTP/1.1 403 Forbidden
 | 及时付身份证认证回显| [/handIdCardAuthStatus](#handIdCardAuthStatus)                      | urlencoded           | GET   | 张树彬 |
 | 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   | 张树彬     |
 | 及时付账户认证信息回显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded           | GET   | 张树彬 |
+| 消费 | [/sale](#sale)                      | urlencoded           | POST   | 李飞     |
   
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
@@ -1039,5 +1040,61 @@ Content-Length: 100
     "unionBankNo":"56SDFSD56SDF",//联行号
     "bankDeposit":"建设大街19号",//开户网点
     "respMsg":"查询成功"
+}
+```
+
+<a id="sale"></a>
+### 消费  /sale
+#### 1\. 消费
+请求：  
+```
+POST /sale HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813",
+ksnNo: "800090000004",
+reqNo: "129",
+position: "117.194778,39.113809",
+currency: "CNY",
+amount: "300",
+cardSerialNum: "001",
+icData: "XXXXXXXX",
+pin: "XXXXX",
+trackNo: "XXXX"
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "reqNo":"130",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "merchantName":"XXX",
+    "merchantNo":"111",    
+    "terminalNo":"22222",    
+    "operatorNo":"01",    
+    "resultCode":"00",    
+    "cardNoWipe":"333**8233",    
+    "amount":"300",    
+    "currency":"CNY",    
+    "voucherNo":"000130",   
+    "batchNo":"001234",   
+    "transTime":"20151212125959",   
+    "refNo":"666666",
+    "authNo":"666666777777",
+    "script":"ic55"
 }
 ```
