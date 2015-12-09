@@ -66,17 +66,17 @@ HTTP/1.1 403 Forbidden
 | 绑定/解绑用户银行卡| [/bindBankCard](#bindBankCard)                      | urlencoded           | GET   | 李飞     |
 | 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   | 张树彬     |
 | 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   | 张树彬     |
-| 实名认证信息灰显| [/realNameAuthStatus](#realNameAuthStatus)                      | urlencoded           | GET   | 张树彬     |
+| 实名认证信息回显| [/realNameAuthStatus](#realNameAuthStatus)                      | urlencoded           | GET   | 张树彬     |
 | 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   | 张树彬     |
-| 商户认证信息灰显| [/merchantAuthStatus](#merchantAuthStatus)                      | urlencoded           | GET   | 张树彬     |
+| 商户认证信息回显| [/merchantAuthStatus](#merchantAuthStatus)                      | urlencoded           | GET   | 张树彬     |
 | 账户认证| [/accountAuth](#accountAuth)                      | urlencoded           | POST   | 张树彬     |
-| 账户认证信息灰显| [/accountAuthStatus](#accountAuthStatus)                      | urlencoded           | GET   | 张树彬     |
+| 账户认证信息回显| [/accountAuthStatus](#accountAuthStatus)                      | urlencoded           | GET   | 张树彬     |
 | 签名认证| [/signatureAuth](#signatureAuth)                      | urlencoded           | POST   | 张树彬     |
-| 签名认证信息灰显| [/signatureAuthStatus](#signatureAuthStatus)                      | urlencoded           | GET   | 张树彬     |
+| 签名认证信息回显| [/signatureAuthStatus](#signatureAuthStatus)                      | urlencoded           | GET   | 张树彬     |
 | 及时付身份证认证| [/handIdCardAuth](#handIdCardAuth)                      | urlencoded           | POST   | 张树彬     |
-| 及时付身份证认证灰显| [/handIdCardAuthStatus](#handIdCardAuthStatus)                      | urlencoded           | GET   | 张树彬 |
+| 及时付身份证认证回显| [/handIdCardAuthStatus](#handIdCardAuthStatus)                      | urlencoded           | GET   | 张树彬 |
 | 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   | 张树彬     |
-| 及时付账户认证信息灰显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded           | GET   | 张树彬 |
+| 及时付账户认证信息回显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded           | GET   | 张树彬 |
   
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
@@ -629,8 +629,8 @@ Content-Length: 100
 ```
 
 <a id="realNameAuthStatus"></a>
-### 实名认证信息灰显  /realNameAuthStatus
-#### 1\. 实名认证信息灰显
+### 实名认证信息回显  /realNameAuthStatus
+#### 1\. 实名认证信息回显
 请求：  
 ```
 POST /realNameAuthStatus HTTP/1.1
@@ -705,8 +705,8 @@ Content-Length: 100
 ```
 
 <a id="merchantAuthStatus"></a>
-### 商户认证信息灰显  /merchantAuthStatus
-#### 1\. 商户认证信息灰显
+### 商户认证信息回显  /merchantAuthStatus
+#### 1\. 商户认证信息回显
 请求：  
 ```
 POST /merchantAuthStatus HTTP/1.1
@@ -782,8 +782,8 @@ Content-Length: 100
 ```
 
 <a id="accountAuthStatus"></a>
-### 账户认证信息灰显  /accountAuthStatus
-#### 1\. 账户认证信息灰显
+### 账户认证信息回显  /accountAuthStatus
+#### 1\. 账户认证信息回显
 请求：  
 ```
 POST /accountAuthStatus HTTP/1.1
@@ -856,8 +856,8 @@ Content-Length: 100
 ```
 
 <a id="signatureAuthStatus"></a>
-### 签名认证信息灰显  /signatureAuthStatus
-#### 1\. 签名认证信息灰显
+### 签名认证信息回显  /signatureAuthStatus
+#### 1\. 签名认证信息回显
 请求：  
 ```
 POST /signatureAuthStatus HTTP/1.1
@@ -926,8 +926,8 @@ Content-Length: 100
 ```
 
 <a id="handIdCardAuthStatus"></a>
-### 及时付身份证认证信息灰显  /handIdCardAuthStatus
-#### 1\. 及时付身份证认证信息灰显
+### 及时付身份证认证信息回显  /handIdCardAuthStatus
+#### 1\. 及时付身份证认证信息回显
 请求：  
 ```
 POST /handIdCardAuthStatus HTTP/1.1
@@ -1002,8 +1002,8 @@ Content-Length: 100
 ```
 
 <a id="dzAccountAuthStatus"></a>
-### 及时付账户认证信息灰显  /dzAccountAuthStatus
-#### 1\. 及时付账户认证信息灰显
+### 及时付账户认证信息回显  /dzAccountAuthStatus
+#### 1\. 及时付账户认证信息回显
 请求：  
 ```
 POST /dzAccountAuthStatus HTTP/1.1
