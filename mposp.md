@@ -118,12 +118,12 @@ Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-{
+
     "loginName": "张珊",
     "password": "123456",
     "position": "117.194778,39.113809",
     "appVersion": "ios.未知.1.1.813"
-}
+
 ```
 响应：  
 ```
@@ -185,12 +185,12 @@ Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-{
+
     "appVersion":"ios.未知.1.1.813",
     "product":ZFT,
     "position":"117.194778,39.113809",
     "respTime":"20151126184737."
-}
+
 
 
 ```
