@@ -52,25 +52,31 @@ HTTP/1.1 403 Forbidden
 ```
 
 ## 功能路径列表
-| 资源名称     | 路径                                     | Content-Type         | 请求方式     |
+| 资源名称     | 路径                                     | Content-Type         | 请求方式     | 维护人     |
 |-------------|-----------------------------------------|----------------------|---------------|
-| 获取验证码| [/sendMobileMessage](#sendMobileMessage)                      | urlencoded           | POST   |
-| 登录| [/login](#login)                      | urlencoded           | GET      |
-| 注册| [/register](#register)                      | urlencoded           | POST   |
-| 签到| [/signin](#signin)                      | urlencoded           | POST   |
-| 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   |
-| 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   |
-| 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   |
-| 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   |
-| 获取18家结算银行| [/bankList](#bankList)                      | urlencoded           | GET   |
-| 绑定/解绑用户银行卡| [/bindBankCard](#bindBankCard)                      | urlencoded           | GET   |
-| 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   |
-| 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   |
-| 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   |
-| 账户认证| [/accountAuth](#accountAuth)                      | urlencoded           | POST   |
-| 签名认证| [/signatureAuth](#signatureAuth)                      | urlencoded           | POST   |
-| 及时付手持身份证半身照认证| [/handIdCardAuth](#handIdCardAuth)                      | urlencoded           | POST   |
-| 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   |
+| 获取验证码| [/sendMobileMessage](#sendMobileMessage)                      | urlencoded           | POST   | 张树彬   |
+| 登录| [/login](#login)                      | urlencoded           | GET      | 武坤萌   |
+| 注册| [/register](#register)                      | urlencoded           | POST   | 李飞   |
+| 签到| [/signin](#signin)                      | urlencoded           | POST   | 李飞   |
+| 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   | 李飞   |
+| 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   | 李飞   |
+| 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   | 李飞   |
+| 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   | 李飞   |
+| 获取18家结算银行| [/bankList](#bankList)                      | urlencoded           | GET   | 李飞   |
+| 绑定/解绑用户银行卡| [/bindBankCard](#bindBankCard)                      | urlencoded           | GET   | 李飞   |
+| 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   | 张树彬   |
+| 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   | 张树彬   |
+| 实名认证信息灰显| [/realNameAuthStatus](#realNameAuthStatus)                      | urlencoded           | GET   | 张树彬   |
+| 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   | 张树彬   |
+| 商户认证信息灰显| [/merchantAuthStatus](#merchantAuthStatus)                      | urlencoded           | GET   | 张树彬   |
+| 账户认证| [/accountAuth](#accountAuth)                      | urlencoded           | POST   | 张树彬   |
+| 账户认证信息灰显| [/accountAuthStatus](#accountAuthStatus)                      | urlencoded           | GET   | 张树彬   |
+| 签名认证| [/signatureAuth](#signatureAuth)                      | urlencoded           | POST   | 张树彬   |
+| 签名认证信息灰显| [/signatureAuthStatus](#signatureAuthStatus)                      | urlencoded           | GET   | 张树彬   |
+| 及时付手持身份证半身照认证| [/handIdCardAuth](#handIdCardAuth)                      | urlencoded           | POST   | 张树彬   |
+| 及时付手持身份证半身照认证信息灰显| [/handIdCardAuthStatus](#handIdCardAuthStatus)                      | urlencoded           | GET   | 张树彬   |
+| 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   | 张树彬   |
+| 及时付账户认证信息灰显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded           | GET   | 张树彬   |
   
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
@@ -621,6 +627,44 @@ Content-Length: 100
 }
 ```
 
+<a id="realNameAuthStatus"></a>
+### 实名认证信息灰显  /realNameAuthStatus
+#### 1\. 实名认证信息灰显
+请求：  
+```
+POST /realNameAuthStatus HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "authStatus":(0:未认证, 1:认证成功, 2:认证失败, 3:审核中),
+    "name":"张三",//真实姓名
+    "idNumber":"341225199005063796",//身份证
+    "personal":"d500000000620995.png",//身份证正面照图片名称
+    "personalBack":"b500000000620995.png",//身份证背面照图片名称
+    "respMsg":"查询成功"
+}
+```
+
 <a id="merchantAuth"></a>
 ### 商户认证  /merchantAuth
 #### 1\. 商户认证
@@ -656,6 +700,44 @@ Content-Length: 100
     "isSuccess":true,
     "respCode":"SUCCESS",
     "respMsg":"商户认证信息已提交,请耐心等待"
+}
+```
+
+<a id="merchantAuthStatus"></a>
+### 商户认证信息灰显  /merchantAuthStatus
+#### 1\. 商户认证信息灰显
+请求：  
+```
+POST /merchantAuthStatus HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "authStatus":(0:未认证, 1:认证成功, 2:认证失败, 3:审核中),
+    "companyName":"大众食品商店",//企业名称
+    "business":"q500000000620995.png",//营业执照图片名称
+    "regPlace":"兴华大道",//经营地址
+    "businessLicense":"5DSF5SDFS5DF",//营业执照号 
+    "respMsg":"查询成功"
 }
 ```
 
@@ -698,6 +780,45 @@ Content-Length: 100
 }
 ```
 
+<a id="accountAuthStatus"></a>
+### 账户认证信息灰显  /accountAuthStatus
+#### 1\. 账户认证信息灰显
+请求：  
+```
+POST /accountAuthStatus HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "authStatus":(0:未认证, 1:认证成功, 2:认证失败, 3:审核中),
+    "accountNo":"6217000010012052348",//银行卡号
+    "card":"c500000000620995.png",//银行卡图片名称
+    "name":"张三",//账户名
+    "bankName":"建设银行",//银行名称
+    "unionBankNo":"56SDFSD56SDF",//联行号
+    "respMsg":"查询成功"
+}
+```
+
 <a id="signatureAuth"></a>
 ### 签名认证  /signatureAuth
 #### 1\. 签名认证
@@ -733,6 +854,40 @@ Content-Length: 100
 }
 ```
 
+<a id="signatureAuthStatus"></a>
+### 签名认证信息灰显  /signatureAuthStatus
+#### 1\. 签名认证信息灰显
+请求：  
+```
+POST /signatureAuthStatus HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "authStatus":(0:未认证, 1:认证成功, 2:认证失败, 3:审核中),
+    "signature":"s500000000620995.png",//签名图片名称
+    "respMsg":"查询成功"
+}
+```
 
 <a id="handIdCardAuth"></a>
 ### 及时付手持身份证半身照认证  /handIdCardAuth
@@ -746,7 +901,6 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
-merchantId: 675519 //商户id,生产环境无需传(暂时先从激活绑定设备接口中获取)
 idCard: 图片 //手持身份证图片
 ```
 
@@ -767,6 +921,42 @@ Content-Length: 100
     "respCode":"SUCCESS",
     "isOldCard": true/false, //true：t1银行卡在十八家银行之内; false：不在
     "respMsg":"手持身份证半身照认证信息已提交,请耐心等待"
+}
+```
+
+<a id="handIdCardAuthStatus"></a>
+### 及时付手持身份证半身照认证信息灰显  /handIdCardAuthStatus
+#### 1\. 及时付手持身份证半身照认证信息灰显
+请求：  
+```
+POST /handIdCardAuthStatus HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "authStatus":(0:未认证, 1:认证成功, 2:认证失败, 3:审核中),
+    "idCard":"id500000000620995.png",//身份证图片名称
+    "respMsg":"查询成功"
 }
 ```
 
@@ -807,5 +997,46 @@ Content-Length: 100
     "isSuccess":true,
     "respCode":"SUCCESS",
     "respMsg":"账户认证信息已提交,请耐心等待"
+}
+```
+
+<a id="dzAccountAuthStatus"></a>
+### 及时付账户认证信息灰显  /dzAccountAuthStatus
+#### 1\. 及时付账户认证信息灰显
+请求：  
+```
+POST /dzAccountAuthStatus HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "authStatus":(0:未认证, 1:认证成功, 2:认证失败, 3:审核中),
+    "accountNo":"6217000010012052348",//银行卡号
+    "card":"c500000000620995.png",//银行卡图片名称
+    "name":"张三",//账户名
+    "bankName":"建设银行",//银行名称
+    "unionBankNo":"56SDFSD56SDF",//联行号
+    "bankDeposit":"建设大街19号",//开户网点
+    "respMsg":"查询成功"
 }
 ```
