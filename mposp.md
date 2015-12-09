@@ -58,6 +58,7 @@ HTTP/1.1 403 Forbidden
 | 登录| [/login](#login)                      | urlencoded           | POST      | 武坤萌     |
 | 注册| [/register](#register)                      | urlencoded           | POST   |  李飞     |
 | 签到| [/signin](#signin)                      | urlencoded           | POST   | 李飞     |
+| ICkey回调接口| [/downloadFinished](#downloadFinished)                      | urlencoded           | POST   | 李飞     |
 | 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   | 李飞     |
 | 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   | 李飞     |
 | 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   | 李飞     |
@@ -181,6 +182,38 @@ Content-Length: 100
     "respMsg":"祝贺您成功注册."
 }
 ```
+<a id="downloadFinished"></a>
+### ICkey完成回调接口  /downloadFinished
+#### 1\. ICkey完成回调接口
+请求：  
+```
+POST /downloadFinished HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+
+```
+响应：  
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151126184737",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"已更新状态."
+}
+```
+
 <a id="signin"></a>
 ### 签到  /signin
 #### 1\. 签到
