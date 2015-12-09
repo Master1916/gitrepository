@@ -52,33 +52,33 @@ HTTP/1.1 403 Forbidden
 ```
 
 ## 功能路径列表
-| 资源名称     | 路径                                     | Content-Type         | 请求方式     | 维护人     |
-|-------------|-----------------------------------------|----------------------|---------------|---------------|
-| 获取验证码| [/sendMobileMessage](#sendMobileMessage)                      | urlencoded           | POST   | 张树彬     |
-| 登录| [/login](#login)                      | urlencoded           | POST      | 武坤萌     |
-| 注册| [/register](#register)                      | urlencoded           | POST   |  李飞     |
-| 签到| [/signin](#signin)                      | urlencoded           | POST   | 李飞     |
-| ICkey回调接口| [/downloadFinished](#downloadFinished)                      | urlencoded           | POST   | 李飞     |
-| 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   | 李飞     |
-| 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   | 李飞     |
-| 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   | 李飞     |
-| 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   | 李飞     |
-| 获取18家结算银行| [/bankList](#bankList)                      | urlencoded           | GET   | 李飞     |
-| 绑定/解绑用户银行卡| [/bindBankCard](#bindBankCard)                      | urlencoded           | GET   | 李飞     |
-| 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   | 张树彬     |
-| 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   | 张树彬     |
-| 实名认证信息回显| [/realNameAuthStatus](#realNameAuthStatus)                      | urlencoded           | GET   | 张树彬     |
-| 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   | 张树彬     |
-| 商户认证信息回显| [/merchantAuthStatus](#merchantAuthStatus)                      | urlencoded           | GET   | 张树彬     |
-| 账户认证| [/accountAuth](#accountAuth)                      | urlencoded           | POST   | 张树彬     |
-| 账户认证信息回显| [/accountAuthStatus](#accountAuthStatus)                      | urlencoded           | GET   | 张树彬     |
-| 签名认证| [/signatureAuth](#signatureAuth)                      | urlencoded           | POST   | 张树彬     |
-| 签名认证信息回显| [/signatureAuthStatus](#signatureAuthStatus)                      | urlencoded           | GET   | 张树彬     |
-| 及时付身份证认证| [/handIdCardAuth](#handIdCardAuth)                      | urlencoded           | POST   | 张树彬     |
-| 及时付身份证认证回显| [/handIdCardAuthStatus](#handIdCardAuthStatus)                      | urlencoded           | GET   | 张树彬 |
-| 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   | 张树彬     |
-| 及时付账户认证信息回显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded           | GET   | 张树彬 |
-| 消费 | [/sale](#sale)                      | urlencoded           | POST   | 李飞     |
+| 资源名称     | 路径                                     | Content-Type         | 请求方式     | 维护人     | 是否需要登录|
+|-------------|-----------------------------------------|----------------------|---------------|---------------|---------------|
+| 获取验证码| [/sendMobileMessage](#sendMobileMessage)                      | urlencoded           | POST   | 张树彬     | 否   |
+| 登录| [/login](#login)                      | urlencoded           | POST      | 武坤萌     | 否   |
+| 注册| [/register](#register)                      | urlencoded           | POST   |  李飞     | 否   |
+| 签到| [/signin](#signin)                      | urlencoded           | POST   | 李飞     | 是   |
+| ICkey回调接口| [/downloadFinished](#downloadFinished)                      | urlencoded           | POST   | 李飞     | 是   |
+| 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   | 李飞     | 是   |
+| 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   | 李飞     | 是   |
+| 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   | 李飞     | 是   |
+| 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   | 李飞     | 否   |
+| 获取18家结算银行| [/bankList](#bankList)                      | urlencoded           | GET   | 李飞     | 否   |
+| 绑定/解绑用户银行卡| [/bindBankCard](#bindBankCard)                      | urlencoded           | GET   | 李飞     | 是   |
+| 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   | 张树彬     | 是   |
+| 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   | 张树彬     | 是   |
+| 实名认证信息回显| [/realNameAuthStatus](#realNameAuthStatus)                      | urlencoded           | GET   | 张树彬  | 是   |
+| 商户认证| [/merchantAuth](#merchantAuth)                      | urlencoded           | POST   | 张树彬     | 是   |
+| 商户认证信息回显| [/merchantAuthStatus](#merchantAuthStatus)                      | urlencoded           | GET   | 张树彬  | 是   |
+| 账户认证| [/accountAuth](#accountAuth)                      | urlencoded           | POST   | 张树彬     | 是   |
+| 账户认证信息回显| [/accountAuthStatus](#accountAuthStatus)                      | urlencoded           | GET   | 张树彬    | 是   |
+| 签名认证| [/signatureAuth](#signatureAuth)                      | urlencoded           | POST   | 张树彬    | 是   |
+| 签名认证信息回显| [/signatureAuthStatus](#signatureAuthStatus)                      | urlencoded           | GET   | 张树彬| 是   |
+| 及时付身份证认证| [/handIdCardAuth](#handIdCardAuth)                      | urlencoded           | POST   | 张树彬     | 是   |
+| 及时付身份证认证回显| [/handIdCardAuthStatus](#handIdCardAuthStatus)                 | urlencoded      | GET   | 张树彬 | 是   |
+| 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   | 张树彬     | 是   |
+| 及时付账户认证信息回显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded    | GET   | 张树彬 | 是   |
+| 消费 | [/sale](#sale)                      | urlencoded           | POST   | 李飞     | 是   |
   
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
