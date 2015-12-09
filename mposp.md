@@ -73,10 +73,10 @@ HTTP/1.1 403 Forbidden
 | 账户认证信息灰显| [/accountAuthStatus](#accountAuthStatus)                      | urlencoded           | GET   | 张树彬   |
 | 签名认证| [/signatureAuth](#signatureAuth)                      | urlencoded           | POST   | 张树彬   |
 | 签名认证信息灰显| [/signatureAuthStatus](#signatureAuthStatus)                      | urlencoded           | GET   | 张树彬   |
-| 及时付手持身份证半身照认证| [/handIdCardAuth](#handIdCardAuth)                      | urlencoded           | POST   | 张树彬   |
-| 及时付手持身份证半身照认证信息灰显| [/handIdCardAuthStatus](#handIdCardAuthStatus)                      | urlencoded           | GET   | 张树彬   |
+| 及时付身份证认证| [/handIdCardAuth](#handIdCardAuth)                      | urlencoded           | POST   | 张树彬   |
+| 及时付身份证认证灰显| [/handIdCardAuthStatus](#handIdCardAuthStatus)                      | urlencoded           | GET   | 张树彬 |
 | 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   | 张树彬   |
-| 及时付账户认证信息灰显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded           | GET   | 张树彬   |
+| 及时付账户认证信息灰显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded           | GET   | 张树彬 |
   
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
@@ -890,8 +890,8 @@ Content-Length: 100
 ```
 
 <a id="handIdCardAuth"></a>
-### 及时付手持身份证半身照认证  /handIdCardAuth
-#### 1\. 及时付手持身份证半身照认证
+### 及时付身份证认证  /handIdCardAuth
+#### 1\. 及时付身份证认证
 请求：  
 ```
 POST /handIdCardAuth HTTP/1.1
@@ -925,8 +925,8 @@ Content-Length: 100
 ```
 
 <a id="handIdCardAuthStatus"></a>
-### 及时付手持身份证半身照认证信息灰显  /handIdCardAuthStatus
-#### 1\. 及时付手持身份证半身照认证信息灰显
+### 及时付身份证认证信息灰显  /handIdCardAuthStatus
+#### 1\. 及时付身份证认证信息灰显
 请求：  
 ```
 POST /handIdCardAuthStatus HTTP/1.1
