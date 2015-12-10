@@ -79,7 +79,7 @@ HTTP/1.1 403 Forbidden
 | 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   | 张树彬     | 是   |
 | 及时付账户认证信息回显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded    | GET   | 张树彬 | 是   |
 | 消费 | [/sale](#sale)                      | urlencoded           | POST   | 李飞     | 是   |
-  
+| 余额查询 | [/query](#query)                      | urlencoded           | POST   | 李飞     | 是   |  
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
 ### 获取验证码  /sendMobileMessage
@@ -395,7 +395,8 @@ Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-date: "20151201"
+startDate: "20151201120000"
+endDate: "20151201123000"
 respNo: "1111"
 reqTime: "20151124111059"
 appVersion: "ios.未知.1.1.813"
@@ -416,7 +417,7 @@ respNo: "111"
 merchantName: "啊啊啊啊"
 merchantNo: "1111"
 terminalNo: "1111"
-appVersion: 
+transactions: 
 {
     "reqNo": 645254,
     "merchantName": "数目数目",
@@ -1095,8 +1096,9 @@ currency: "CNY",
 amount: "300",
 cardSerialNum: "001",
 icData: "XXXXXXXX",
-pin: "XXXXX",
-trackNo: "XXXX"
+encPinblock: "XXXXX",
+encTracks: "TRACK2",
+checksum:"XXX"
 
 ```
 
@@ -1112,7 +1114,7 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
-    "reqNo":"130",
+    "reqNo":"129",
     "isSuccess":true,
     "respCode":"SUCCESS",
     "merchantName":"XXX",
@@ -1131,3 +1133,47 @@ Content-Length: 100
     "script":"ic55"
 }
 ```
+<a id="query"></a>
+### 余额查询  /query
+#### 1\. 余额查询
+请求：  
+```
+POST /query HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813",
+ksnNo: "800090000004",
+reqNo: "129",
+cardSerialNum: "001",
+icData: "XXXXXXXX",
+encPinblock: "XXXXX",
+encTracks: "TRACK2",
+checksum:"XXX"
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+{
+    "reqNo":"129",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "balance":"XXX",
+    "resultCode":"00",    
+    "currency":"CNY",    
+    "transTime":"20151212125959",   
+    "script":"ic55"
+}
+```
+
