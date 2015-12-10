@@ -466,7 +466,7 @@ transactions:
 #### 1\. 联行号查询
 请求：  
 ```
-POST /bankQuery HTTP/1.1
+GET /bankQuery HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -509,7 +509,7 @@ Content-Length: 100
 #### 1\. 获取18家结算银行
 请求：  
 ```
-POST /bankList HTTP/1.1
+GET /bankList HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -668,7 +668,7 @@ Content-Length: 100
 #### 1\. 实名认证信息回显
 请求：  
 ```
-POST /realNameAuthStatus HTTP/1.1
+GET /realNameAuthStatus HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -744,7 +744,7 @@ Content-Length: 100
 #### 1\. 商户认证信息回显
 请求：  
 ```
-POST /merchantAuthStatus HTTP/1.1
+GET /merchantAuthStatus HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -821,7 +821,7 @@ Content-Length: 100
 #### 1\. 账户认证信息回显
 请求：  
 ```
-POST /accountAuthStatus HTTP/1.1
+GET /accountAuthStatus HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -895,7 +895,7 @@ Content-Length: 100
 #### 1\. 签名认证信息回显
 请求：  
 ```
-POST /signatureAuthStatus HTTP/1.1
+GET /signatureAuthStatus HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -965,7 +965,7 @@ Content-Length: 100
 #### 1\. 及时付身份证认证信息回显
 请求：  
 ```
-POST /handIdCardAuthStatus HTTP/1.1
+GET /handIdCardAuthStatus HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -1041,7 +1041,7 @@ Content-Length: 100
 #### 1\. 及时付账户认证信息回显
 请求：  
 ```
-POST /dzAccountAuthStatus HTTP/1.1
+GET /dzAccountAuthStatus HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
