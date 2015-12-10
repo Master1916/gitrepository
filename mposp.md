@@ -433,11 +433,7 @@ transactions:
     "batchNo": 123,
     "transTime": 20151130125253,
     "refNo": 1234,
-    "authNo": 1234,
-    "respTime":"20151130125253",
-    "isSuccess":true,
-    "respCode":"SUCCESS",
-    "respMsg":"验证成功"
+    "authNo": 1234
 }，
 {
     "reqNo": 645254,
@@ -453,12 +449,13 @@ transactions:
     "batchNo": 123,
     "transTime": 20151130125253,
     "refNo": 1234,
-    "authNo": 1234,
-    "respTime":"20151130125253",
-    "isSuccess":true,
-    "respCode":"SUCCESS",
-    "respMsg":"验证成功"
+    "authNo": 1234
+
 }
+"respTime":"20151130125253",
+"isSuccess":true,
+"respCode":"SUCCESS",
+"respMsg":"验证成功",
 
 ```
 
