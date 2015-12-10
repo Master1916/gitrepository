@@ -399,7 +399,6 @@ Content-Length: 30
 startDate: "20151201120000"
 endDate: "20151201123000"
 respNo: "1111"
-reqTime: "20151124111059"
 appVersion: "ios.未知.1.1.813"
 
 ```
