@@ -79,7 +79,9 @@ HTTP/1.1 403 Forbidden
 | 及时付账户认证| [/dzAccountAuth](#dzAccountAuth)                      | urlencoded           | POST   | 张树彬     | 是   |
 | 及时付账户认证信息回显| [/dzAccountAuthStatus](#dzAccountAuthStatus)                      | urlencoded    | GET   | 张树彬 | 是   |
 | 消费 | [/sale](#sale)                      | urlencoded           | POST   | 李飞     | 是   |
-| 余额查询 | [/query](#query)                      | urlencoded           | POST   | 李飞     | 是   |  
+| 余额查询 | [/query](#query)                      | urlencoded           | POST   | 李飞     | 是   |
+| 四审认证状态查询 | [/authStatus](#authStatus)                      | urlencoded           | GET   | 张树彬     | 是   |  
+| 及时付认证状态查询 | [/dzAuthStatus](#dzAuthStatus)                      | urlencoded           | GET   | 张树彬     | 是   |  
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
 ### 获取验证码  /sendMobileMessage
@@ -1175,3 +1177,72 @@ Content-Length: 100
 }
 ```
 
+<a id="authStatus"></a>
+### 四审认证状态查询  /authStatus
+#### 1\. 四审认证状态查询
+请求：  
+```
+GET /authStatus HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "status":"1111", //认证状态 (第一位：实名认证状态, 第二位：商户认证状态, 第三位：账户认证状态, 第四位：签名认证状态)
+    "respMsg":"查询成功"
+}
+```
+
+<a id="dzAuthStatus"></a>
+### 及时付认证状态查询  /dzAuthStatus
+#### 1\. 及时付认证状态查询
+请求：  
+```
+GET /dzAuthStatus HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "status":"11", //认证状态 (第一位：手持身份证半身照认证状态, 第二位：账户认证状态)
+    "respMsg":"查询成功"
+}
+```
