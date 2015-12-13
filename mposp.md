@@ -649,8 +649,6 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
-    "merchantId": 62548,
-    "userId": 645254,
     "respTime":"20151130125253",
     "isSuccess":true,
     "respCode":"SUCCESS",
