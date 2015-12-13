@@ -227,13 +227,8 @@ Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-
     "appVersion":"ios.未知.1.1.813",
-    "product":ZFT,
     "position":"117.194778,39.113809",
-    "respTime":"20151126184737."
-
-
 
 ```
 响应：  
@@ -398,9 +393,7 @@ Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-startDate: "20151201120000"
-endDate: "20151201123000"
-type: 0 (0:全部交易, 1:T1交易, 2:D0交易)
+date: "20151201"
 respNo: "1111"
 appVersion: "ios.未知.1.1.813"
 
@@ -423,35 +416,41 @@ terminalNo: "1111"
 transactions: 
 {
     "reqNo": 645254,
-    "merchantName": "数目数目",
+    "transType": "sale",
+    "voucherNo": 2222,//交易流水号
+    "respCode": "00",
+    "amount": 1234,
     "merchantNo": 111111111,
     "terminalNo": 22222,
-    "operatorNo": 01,
-    "cardNoWipe": 645***254,
-    "amount": 1234,
-    "currency": "CNY",
-    "issuer": "XX银行",
-    "voucherNo": 2222,
-    "batchNo": 123,
+    "currency": "CNY",    
+    "immediatePay": false,    //是否是DO交易
     "transTime": 20151130125253,
     "refNo": 1234,
-    "authNo": 1234
+    "authNo": 1234    
+    "cardTail": "6666",//卡号后四位    
+    "cardNoWipe": 645***254,
+    "operatorNo": 01,
+    "issuer": "XX银行",
+    "batchNo": 123
 }，
 {
     "reqNo": 645254,
-    "merchantName": "数目数目",
+    "transType": "sale",
+    "voucherNo": 2222,//交易流水号
+    "respCode": "00",
+    "amount": 1234,
     "merchantNo": 111111111,
     "terminalNo": 22222,
-    "operatorNo": 01,
-    "cardNoWipe": 645***254,
-    "amount": 1234,
-    "currency": "CNY",
-    "issuer": "XX银行",
-    "voucherNo": 2222,
-    "batchNo": 123,
+    "currency": "CNY",    
+    "immediatePay": false,    //是否是DO交易
     "transTime": 20151130125253,
     "refNo": 1234,
-    "authNo": 1234
+    "authNo": 1234    
+    "cardTail": "6666",//卡号后四位    
+    "cardNoWipe": 645***254,
+    "operatorNo": 01,
+    "issuer": "XX银行",
+    "batchNo": 123
 
 }
 "respTime":"20151130125253",
@@ -472,7 +471,7 @@ Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-keyWord: "20151124111059"
+keyWord: "中国 银行"
 reqNo: "111"
 max: "111"
 p: "111"
