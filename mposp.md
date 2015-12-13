@@ -588,8 +588,8 @@ Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-delete: "false"
-cardId: "XXX"
+delete: "false" //绑定、解绑参数
+cardIds: "XXX YYYY"//解绑卡列表 空格区分
 bankCard: "XXXX"
 bankAccountName: "XX银行"
 reqTime: "20151124111059"
