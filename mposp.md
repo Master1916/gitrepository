@@ -293,8 +293,8 @@ Content-Length: 100
 ```
 
 <a id="resetPassword"></a>
-### 重置密码  /resetPassword
-#### 1\. 重置密码
+### 修改密码  /resetPassword
+#### 1\. 修改密码
 请求：  
 ```
 POST /resetPassword HTTP/1.1
@@ -331,8 +331,8 @@ Content-Length: 100
 ```
 
 <a id="forgetPassword"></a>
-### 重置密码  /forgetPassword
-#### 1\. 重置密码
+### 忘记密码  /forgetPassword
+#### 1\. 忘记密码
 请求：  
 ```
 POST /forgetPassword HTTP/1.1
