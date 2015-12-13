@@ -304,9 +304,7 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 password: "123456"
-idNumber: "413023199101259999" //身份证
-mobile: "15801376995"
-idCode: "5741"//验证码
+oldPassword: "354689"
 appVersion: "ios.未知.1.1.813"
 ```
 响应： 
@@ -341,7 +339,9 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 password: "123456"
-oldPassword: "354689"
+idNumber: "413023199101259999" //身份证
+mobile: "15801376995"
+idCode: "5741"//验证码
 appVersion: "ios.未知.1.1.813"
 ```
 响应： 
@@ -363,7 +363,6 @@ Content-Length: 100
     "respMsg":"验证成功"
 }
 ```
-
 
 <a id="transStatus"></a>
 ### 查询交易状态  /transStatus
