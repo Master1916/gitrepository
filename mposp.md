@@ -82,7 +82,8 @@ HTTP/1.1 403 Forbidden
 | 消费 | [/sale](#sale)                      | urlencoded           | POST   | 李飞     | 是   |
 | 余额查询 | [/query](#query)                      | urlencoded           | POST   | 李飞     | 是   |
 | 四审认证状态查询 | [/authStatus](#authStatus)                      | urlencoded           | GET   | 张树彬     | 是   |  
-| 及时付认证状态查询 | [/dzAuthStatus](#dzAuthStatus)                      | urlencoded           | GET   | 张树彬     | 是   |  
+| 及时付认证状态查询 | [/dzAuthStatus](#dzAuthStatus)                      | urlencoded           | GET   | 张树彬     | 是   |
+| 认证图片下载 | [/downloadImg](#downloadImg)                      | urlencoded           | GET   | 张树彬     | 是   |
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
 ### 获取验证码  /sendMobileMessage
@@ -1277,6 +1278,44 @@ Content-Length: 100
     "isSuccess":true,
     "respCode":"SUCCESS",
     "status":"11", //认证状态 (第一位：手持身份证半身照认证状态, 第二位：账户认证状态)
+    "respMsg":"查询成功"
+}
+```
+
+
+<a id="downloadImg"></a>
+### 认证图片下载  /downloadImg
+#### 1\. 认证图片下载
+请求：  
+```
+GET /downloadImg HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+fileName  : "c5000000000000000.png" //图片名称
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "file"：byte数组,//图片流
     "respMsg":"查询成功"
 }
 ```
