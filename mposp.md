@@ -598,10 +598,9 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 ksnNo: "5010100000023402"
-mobile: "15801376995"
 activeCode: "11C718FF1FD14531"
-product: "ZFT"
-password: "123456"
+product: "ZFT" //产品型号
+model: "landim35" //设备型号
 appVersion: "ios.未知.1.1.813"
 ```
 响应： 
