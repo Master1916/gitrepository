@@ -60,6 +60,7 @@ HTTP/1.1 403 Forbidden
 | 签到| [/signin](#signin)                      | urlencoded           | POST   | 李飞     | 是   |
 | ICkey回调接口| [/downloadFinished](#downloadFinished)                      | urlencoded           | POST   | 李飞     | 是   |
 | 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   | 李飞     | 是   |
+| 忘记密码| [/forgetPassword](#forgetPassword)                      | urlencoded           | POST   | 李飞     | 否   |
 | 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   | 李飞     | 是   |
 | 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   | 李飞     | 是   |
 | 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   | 李飞     | 否   |
@@ -302,7 +303,6 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 password: "123456"
-oldPassword: "354689"
 idNumber: "413023199101259999"
 mobile: "15801376995"
 product: "ZFT"
@@ -328,6 +328,42 @@ Content-Length: 100
     "respMsg":"验证成功"
 }
 ```
+
+<a id="forgetPassword"></a>
+### 重置密码  /forgetPassword
+#### 1\. 重置密码
+请求：  
+```
+POST /forgetPassword HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+password: "123456"
+oldPassword: "354689"
+appVersion: "ios.未知.1.1.813"
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "reqNo": 645254,
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"验证成功"
+}
+```
+
 
 <a id="transStatus"></a>
 ### 查询交易状态  /transStatus
