@@ -84,6 +84,7 @@ HTTP/1.1 403 Forbidden
 | 四审认证状态查询 | [/authStatus](#authStatus)                      | urlencoded           | GET   | 张树彬     | 是   |  
 | 及时付认证状态查询 | [/dzAuthStatus](#dzAuthStatus)                      | urlencoded           | GET   | 张树彬     | 是   |
 | 认证图片下载 | [/downloadImg](#downloadImg)                      | urlencoded           | GET   | 张树彬     | 是   |
+| IC回调 | [/transNotify](#transNotify)                      | urlencoded           | POST   | 张树彬     | 是   |
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
 ### 获取验证码  /sendMobileMessage
@@ -1308,5 +1309,39 @@ Content-Length: 100
     "respCode":"SUCCESS",
     "file"：byte数组,//图片流
     "respMsg":"查询成功"
+}
+```
+
+
+<a id="transNotify"></a>
+### IC回调  /transNotify
+#### 1\. IC回调
+请求：  
+```
+POST /transNotify HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+待补充
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    
+    待补充
 }
 ```
