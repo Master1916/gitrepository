@@ -357,7 +357,7 @@ Content-Length: 100
 
 {
     "reqNo": 645254,
-    "isMerchant": true,    
+    "isMerchant": true,    //是否需要输入身份证
     "respTime":"20151130125253",
     "isSuccess":true,
     "respCode":"SUCCESS",
