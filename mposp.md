@@ -357,6 +357,7 @@ Content-Length: 100
 
 {
     "reqNo": 645254,
+    "isMerchant": true,    
     "respTime":"20151130125253",
     "isSuccess":true,
     "respCode":"SUCCESS",
