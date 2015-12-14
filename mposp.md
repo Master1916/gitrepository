@@ -66,6 +66,7 @@ HTTP/1.1 403 Forbidden
 | 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   | 李飞     | 否   |
 | 获取18家结算银行| [/bankList](#bankList)                      | urlencoded           | GET   | 李飞     | 否   |
 | 绑定/解绑用户银行卡| [/bindBankCard](#bindBankCard)                      | urlencoded           | GET   | 李飞     | 是   |
+| 获取用户银行卡列表| [/listBandCard](#listBandCard)                      | urlencoded           | GET   | 李飞     | 是   |
 | 激活绑定设备| [/activeAndBindEquip](#activeAndBindEquip)                      | urlencoded           | POST   | 张树彬     | 是   |
 | 实名认证| [/realNameAuth](#realNameAuth)                      | urlencoded           | POST   | 张树彬     | 是   |
 | 实名认证信息回显| [/realNameAuthStatus](#realNameAuthStatus)                      | urlencoded           | GET   | 张树彬  | 是   |
@@ -621,6 +622,47 @@ Content-Length: 100
 }
 ```
 
+
+<a id="listBandCard"></a>
+### 获取商户绑定银行卡列表  /listBandCard
+#### 1\. 获取商户绑定银行卡列表
+请求：  
+```
+POST /listBandCard HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+list:[
+{
+    "account_no": "XXXX",
+    "bank_name": "xx银行",
+    "bankIndex": 1,
+    "id": 1
+},{
+    "account_no": "XXXX",
+    "bank_name": "xx银行",
+    "bankIndex": 1,
+    "id": 1
+}]
+]
+```
 
 <a id="activeAndBindEquip"></a>
 ### 激活绑定设备  /activeAndBindEquip
