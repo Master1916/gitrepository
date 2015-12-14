@@ -1325,8 +1325,13 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
-待补充
-
+reqNo:"1234"
+origTransTime:"20151212070809"
+origTransType:"sale"
+origReqNo:"1234"
+icData:"asfakfjasklfdsa"
+cardNo:"622266000000"
+cardSerialNum:"01"
 ```
 
 响应： 
@@ -1341,7 +1346,9 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
-    
-    待补充
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"查询成功"
 }
 ```
