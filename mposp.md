@@ -593,7 +593,7 @@ Content-Length: 30
 delete: "false" //绑定、解绑参数
 cardIds: "XXX YYYY"//解绑卡列表 空格区分
 bankCard: "XXXX"
-bankAccountName: "XX银行"
+mobile: "13777775555"
 reqTime: "20151124111059"
 appVersion: "ios.未知.1.1.813"
 
