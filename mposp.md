@@ -651,15 +651,15 @@ Content-Length: 100
 {
 list:[
 {
-    "account_no": "XXXX",
-    "bank_name": "xx银行",
+    "accountNo": "XXXX",
+    "bankName": "xx银行",
     "bankIndex": 1,
-    "id": 1
+    "cardId": 1
 },{
-    "account_no": "XXXX",
-    "bank_name": "xx银行",
-    "bankIndex": 1,
-    "id": 1
+    "accountNo": "XXXX",
+    "bankName": "xx银行",
+    "bankIndex": 3,
+    "cardId": 2
 }]
 ]
 ```
