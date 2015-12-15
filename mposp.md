@@ -591,7 +591,7 @@ Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-idDelete: "false" //绑定、解绑参数
+isDelete: "false" //绑定、解绑参数
 cardIds: "XXX YYYY"//解绑卡列表 空格区分
 bankCard: "XXXX"
 mobile: "13777775555"
@@ -1243,7 +1243,9 @@ Content-Length: 100
     "balance":"XXX",
     "resultCode":"00",    
     "currency":"CNY",    
-    "transTime":"20151212125959",   
+    "issuer":"XX银行",
+    "cardNoWipe":"4444****888",
+    "transTime":"20151212125959", 
     "script":"ic55"
 }
 ```
