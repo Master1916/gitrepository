@@ -654,11 +654,13 @@ list:[
     "accountNo": "XXXX",
     "bankName": "xx银行",
     "bankIndex": 1,
+    "status": 1,//认证状态
     "cardId": 1
 },{
     "accountNo": "XXXX",
     "bankName": "xx银行",
     "bankIndex": 3,
+    "status": 1,//认证状态
     "cardId": 2
 }]
 ]
