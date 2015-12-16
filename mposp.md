@@ -681,6 +681,7 @@ ksnNo: "5010100000023402"
 activeCode: "11C718FF1FD14531"
 product: "ZFT" //产品型号
 model: "landim35" //设备型号
+macAddress:"XX:XX:XX:XX"
 appVersion: "ios.未知.1.1.813"
 ```
 响应： 
