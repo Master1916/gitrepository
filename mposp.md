@@ -86,6 +86,7 @@ HTTP/1.1 403 Forbidden
 | 及时付认证状态查询 | [/dzAuthStatus](#dzAuthStatus)                      | urlencoded           | GET   | 张树彬     | 是   |
 | 认证图片下载 | [/downloadImg](#downloadImg)                      | urlencoded           | GET   | 张树彬     | 是   |
 | IC回调 | [/transNotify](#transNotify)                      | urlencoded           | POST   | 张树彬     | 是   |
+| 更换设备 | [/swiperChange](#swiperChange)                      | urlencoded           | POST   | 李飞     | 是   |
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
 ### 获取验证码  /sendMobileMessage
@@ -1399,3 +1400,41 @@ Content-Length: 100
     "respMsg":"查询成功"
 }
 ```
+
+<a id="swiperChange"></a>
+### 更换设备  /swiperChange
+#### 1\. 更换设备
+请求：  
+```
+POST /swiperChange HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+reqNo:"1234"
+ksnNo:"XXXXXX"
+model:"landim35"
+macAddress:"XXXXXXX"
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"查询成功"
+}
+```
+
