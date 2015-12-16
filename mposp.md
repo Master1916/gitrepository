@@ -62,6 +62,7 @@ HTTP/1.1 403 Forbidden
 | 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   | 李飞     | 是   |
 | 忘记密码| [/forgetPassword](#forgetPassword)                      | urlencoded           | POST   | 李飞     | 否   |
 | 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   | 李飞     | 是   |
+| 发送交易小票接口| [/sendTransMessage](#sendTransMessage)                      | urlencoded           | POST   | 李飞     | 是   |
 | 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   | 李飞     | 是   |
 | 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   | 李飞     | 否   |
 | 获取18家结算银行| [/bankList](#bankList)                      | urlencoded           | GET   | 李飞     | 否   |
@@ -420,6 +421,44 @@ Content-Length: 100
     "respMsg":"验证成功"
 }
 ```
+
+<a id="sendTransMessage"></a>
+### 发送交易小票接口  /sendTransMessage
+#### 1\. 发送交易小票接口
+请求：  
+```
+POST /sendTransMessage HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+amount: "11111"
+origReqNo: "1111"
+origReqTime: "20151124111059"
+reqTime: "20151124111059"
+appVersion: "ios.未知.1.1.813"
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+   "respTime":"20151125161740",
+   "isSuccess":true,
+   "respCode":"SUCCESS",
+   "respMsg":"发送验证码成功,注意查收"
+}
+```
+
 
 <a id="queryTrans"></a>
 ### 查询接口  /queryTrans
