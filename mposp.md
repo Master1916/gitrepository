@@ -491,7 +491,7 @@ Content-Length: 100
    "respTime":"20151125161740",
    "isSuccess":true,
    "respCode":"SUCCESS",
-   "respMsg":"发送验证码成功,注意查收"
+   "respMsg":"短信发送成功,注意查收"
 }
 ```
 
