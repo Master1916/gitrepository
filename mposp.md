@@ -102,7 +102,7 @@ Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
 mobile: "15801376995"
-
+type: "registe"   (非必传项)
 ```
 响应：  
 ```
