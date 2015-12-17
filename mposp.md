@@ -55,7 +55,8 @@ HTTP/1.1 403 Forbidden
 | 资源名称     | 路径                                     | Content-Type         | 请求方式     | 维护人     | 是否需要登录|
 |-------------|-----------------------------------------|----------------------|---------------|---------------|---------------|
 | 获取验证码| [/sendMobileMessage](#sendMobileMessage)                      | urlencoded           | POST   | 张树彬     | 否   |
-| 登录| [/login](#login)                      | urlencoded           | POST      | 武坤萌     | 否   |
+| 登录| [/login](#login)                      | urlencoded           | POST      | 李飞     | 否   |
+| 退出| [/logout](#logout)                      | urlencoded           | POST      | 李飞     | 是   |
 | 注册| [/register](#register)                      | urlencoded           | POST   |  李飞     | 否   |
 | 签到| [/signin](#signin)                      | urlencoded           | POST   | 李飞     | 是   |
 | ICkey回调接口| [/downloadFinished](#downloadFinished)                      | urlencoded           | POST   | 李飞     | 是   |
@@ -88,6 +89,7 @@ HTTP/1.1 403 Forbidden
 | 认证图片下载 | [/downloadImg](#downloadImg)                      | urlencoded           | GET   | 张树彬     | 是   |
 | IC回调 | [/transNotify](#transNotify)                      | urlencoded           | POST   | 张树彬     | 是   |
 | 更换设备 | [/swiperChange](#swiperChange)                      | urlencoded           | POST   | 李飞     | 是   |
+| 静态页面显示 | [/showHtml](#showHtml)                      | urlencoded           | GET   | 李飞     | 否   |
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
 ### 获取验证码  /sendMobileMessage
@@ -153,6 +155,40 @@ Content-Length: 100
 
 {
   
+}
+```
+
+
+<a id="logout"></a>
+### 退出  /logout
+#### 1\. 退出
+请求：  
+```
+POST /logout HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+    "position": "117.194778,39.113809",
+    "appVersion": "ios.未知.1.1.813"
+
+```
+响应：  
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime":"20151126184737",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"退出成功."
 }
 ```
 
@@ -1477,3 +1513,34 @@ Content-Length: 100
 }
 ```
 
+
+<a id="showHtml"></a>
+### 静态页面显示  /showHtml
+#### 1\. 静态页面显示
+请求：  
+```
+POST /showHtml HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+html: "XXX.html"
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+	HTML页面
+}
+```
