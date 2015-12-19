@@ -502,7 +502,8 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 amount: "11111"
-origReqNo: "1111"
+reqNo: "1111"
+mobile: "13500001111"
 reqTime: "20151124111059"
 appVersion: "ios.未知.1.1.813"
 
