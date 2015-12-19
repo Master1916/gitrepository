@@ -64,7 +64,7 @@ HTTP/1.1 403 Forbidden
 | 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   | 李飞     | 是   |
 | 忘记密码| [/forgetPassword](#forgetPassword)                      | urlencoded           | POST   | 李飞     | 否   |
 | 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   | 李飞     | 是   |
-| 发送交易小票接口| [/sendTransMessage](#sendTransMessage)                      | urlencoded           | POST   | 李飞     | 是   |
+| 发送交易小票接口| [/transMessage](#transMessage)                      | urlencoded           | POST   | 李飞     | 是   |
 | 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   | 李飞     | 是   |
 | 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   | 李飞     | 否   |
 | 获取18家结算银行| [/bankList](#bankList)                      | urlencoded           | GET   | 李飞     | 否   |
@@ -490,12 +490,12 @@ Content-Length: 100
 }
 ```
 
-<a id="sendTransMessage"></a>
-### 发送交易小票接口  /sendTransMessage
+<a id="transMessage"></a>
+### 发送交易小票接口  /transMessage
 #### 1\. 发送交易小票接口
 请求：  
 ```
-POST /sendTransMessage HTTP/1.1
+POST /transMessage HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
