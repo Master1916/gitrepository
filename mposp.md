@@ -503,7 +503,6 @@ Content-Length: 30
 
 amount: "11111"
 origReqNo: "1111"
-origReqTime: "20151124111059"
 reqTime: "20151124111059"
 appVersion: "ios.未知.1.1.813"
 
