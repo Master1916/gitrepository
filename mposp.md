@@ -60,6 +60,7 @@ HTTP/1.1 403 Forbidden
 | 注册| [/register](#register)                      | urlencoded           | POST   |  李飞     | 否   |
 | 签到| [/signin](#signin)                      | urlencoded           | POST   | 李飞     | 是   |
 | 保持心跳| [/heartBeat](#heartBeat)                      | urlencoded           | POST   | 李飞     | 是   |
+| 查询DO交易限额| [/transD0Amount](#transD0Amount)                      | urlencoded           | GET   | 李飞     | 是   |
 | ICkey回调接口| [/downloadFinished](#downloadFinished)                      | urlencoded           | POST   | 李飞     | 是   |
 | 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   | 李飞     | 是   |
 | 忘记密码| [/forgetPassword](#forgetPassword)                      | urlencoded           | POST   | 李飞     | 否   |
@@ -436,6 +437,43 @@ Content-Length: 100
     "respMsg":"成功"
 }
 ```
+
+<a id="transD0Amount"></a>
+### 查询DO交易限额  /transD0Amount
+#### 1\. 查询DO交易限额
+请求：  
+```
+GET /transD0Amount HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "merchantAccount":"1111111",
+    "agencyAccount":"2222222222",
+    "showAccount":"333333333",
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"成功"
+}
+```
+
+
 
 <a id="transStatus"></a>
 ### 查询交易状态  /transStatus
