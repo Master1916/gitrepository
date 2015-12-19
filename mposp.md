@@ -504,7 +504,7 @@ Content-Length: 30
 amount: "11111"
 reqNo: "1111"
 mobile: "13500001111"
-reqTime: "20151124111059"
+origReqTime: "20151124111059"
 appVersion: "ios.未知.1.1.813"
 
 ```
