@@ -472,12 +472,12 @@ Content-Length: 100
 }
 ```
 
-<a id="transD0Amount"></a>
-### 查询DO交易限额  /transD0Amount
-#### 1\. 查询DO交易限额
+<a id="transT1Amount"></a>
+### T1当日交易总额  /transT1Amount
+#### 1\. T1当日交易总额
 请求：  
 ```
-GET /transD0Amount HTTP/1.1
+GET /transT1Amount HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
@@ -497,9 +497,9 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
-    "merchantAccount":"1111111",
-    "agencyAccount":"2222222222",
-    "showAccount":"333333333",
+    "merchantAccount":5000000,
+    "agencyAccount":2999992790,
+    "showAccount":5000000,
     "respTime":"20151130125253",
     "isSuccess":true,
     "respCode":"SUCCESS",
