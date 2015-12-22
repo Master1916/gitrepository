@@ -93,6 +93,7 @@ HTTP/1.1 403 Forbidden
 | IC回调 | [/transNotify](#transNotify)                      | urlencoded           | POST   | 张树彬     | 是   |
 | 更换设备 | [/swiperChange](#swiperChange)                      | urlencoded           | POST   | 李飞     | 是   |
 | 静态页面显示 | [/showHtml](#showHtml)                      | urlencoded           | GET   | 李飞     | 否   |
+| 获取消息接口/更新消息状态 | [/message](#message)                      | urlencoded           | GET   | 李飞     | 否   |
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
 ### 获取验证码  /sendMobileMessage
@@ -1647,5 +1648,47 @@ Content-Length: 100
 
 {
 	HTML页面
+}
+```
+
+<a id="message"></a>
+### 静态页面显示  /message
+#### 1\. 静态页面显示
+请求：  
+```
+GET /message HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+messageId: "56711f5b84aea1954cade27b"
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+     
+    "data":{"des":
+		[
+		{"businessType":"2","content":"消息内容2","createTime":1450254226000,"hasLink":"0","isRead":1,"linkAddress":"www.sohu.com","linkText":"搜狐","newsId":"56711f8184aea1954cade27c","newsType":"0","readTime":1450768873990,"title":"测试2"},
+		{"businessType":"1,2","content":"消息内容1","createTime":1450254187000,"hasLink":"0","isRead":0,"linkAddress":"www.sina.com","linkText":"新浪","newsId":"56711f5b84aea1954cade27b","newsType":"0","title":"测试1"}
+		]
+		,"isSuccess":true
+		},
+    "respTime":"20151130125253",
+    "isSuccess":true,
+    "respCode":"SUCCESS",
+    "respMsg":"查询成功"
 }
 ```
