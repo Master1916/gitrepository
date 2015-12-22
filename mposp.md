@@ -62,7 +62,6 @@ HTTP/1.1 403 Forbidden
 | 保持心跳| [/heartBeat](#heartBeat)                      | urlencoded           | POST   | 李飞     | 是   |
 | D0当日交易剩余金额 | [/transD0Amount](#transD0Amount)                      | urlencoded           | GET   | 李飞     | 是   |
 | T1当日交易总额 | [/transT1Amount](#transT1Amount)                      | urlencoded           | GET   | 李飞     | 是   |
-| 查询DO交易限额| [/transD0Amount](#transD0Amount)                      | urlencoded           | GET   | 李飞     | 是   |
 | ICkey回调接口| [/downloadFinished](#downloadFinished)                      | urlencoded           | POST   | 李飞     | 是   |
 | 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   | 李飞     | 是   |
 | 忘记密码| [/forgetPassword](#forgetPassword)                      | urlencoded           | POST   | 李飞     | 否   |
@@ -441,8 +440,8 @@ Content-Length: 100
 ```
 
 <a id="transD0Amount"></a>
-### T1当日交易总额  /transD0Amount
-#### 1\. T1当日交易总额
+### D0当日交易剩余金额  /transD0Amount
+#### 1\. D0当日交易剩余金额
 请求：  
 ```
 GET /transD0Amount HTTP/1.1
@@ -465,6 +464,9 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
+    "merchantAccount":5000000,
+    "agencyAccount":2999992790,
+    "showAccount":5000000,
     "respTime":"20151130125253",
     "isSuccess":true,
     "respCode":"SUCCESS",
