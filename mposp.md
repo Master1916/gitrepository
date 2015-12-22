@@ -1172,6 +1172,7 @@ Content-Length: 100
     "respTime":"20151130125253",
     "isSuccess":true,
     "respCode":"SUCCESS",
+    "name":"张三",
     "authStatus":(0:未认证, 1:认证成功, 2:认证失败, 3:审核中),
     "signature":"s500000000620995.png",//签名图片名称
     "respMsg":"查询成功"
