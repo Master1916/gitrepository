@@ -499,9 +499,7 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
-    "merchantAccount":5000000,
-    "agencyAccount":2999992790,
-    "showAccount":5000000,
+    "amount":5000000,
     "respTime":"20151130125253",
     "isSuccess":true,
     "respCode":"SUCCESS",
