@@ -464,7 +464,7 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
-    "merchantAccount":5000000,
+    "merchantAccount":5000000,//当日商户剩余可用金额
     "agencyAccount":2999992790,
     "showAccount":5000000,
     "respTime":"20151130125253",
