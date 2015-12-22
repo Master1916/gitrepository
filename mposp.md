@@ -1652,8 +1652,8 @@ Content-Length: 100
 ```
 
 <a id="message"></a>
-### 静态页面显示  /message
-#### 1\. 静态页面显示
+### 获取消息接口/更新消息状态  /message
+#### 1\. 获取消息接口/更新消息状态
 请求：  
 ```
 GET /message HTTP/1.1
