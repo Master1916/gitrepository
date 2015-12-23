@@ -108,7 +108,7 @@ Content-Length: 30
 
 appVersion: "ios.未知.1.1.813"
 mobile: "15801376995"
-type: "registe"   (非必传项)
+type: "registe" //注册、忘记密码必传(registe/forget)  (非必传项)
 ```
 响应：  
 ```
