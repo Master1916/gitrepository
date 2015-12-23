@@ -1663,6 +1663,7 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 messageId: "56711f5b84aea1954cade27b"
+detail: false
 
 ```
 
@@ -1679,13 +1680,15 @@ Content-Length: 100
 
 {
      
-    "data":{"des":
+    "isSuccess":true,
+    "head":{"hasUnRead":false,"totalCount":0,"readCount":0,"unReadCount":0} 
+    "body":{"des":
 		[
 		{"businessType":"2","content":"消息内容2","createTime":1450254226000,"hasLink":"0","isRead":1,"linkAddress":"www.sohu.com","linkText":"搜狐","newsId":"56711f8184aea1954cade27c","newsType":"0","readTime":1450768873990,"title":"测试2"},
 		{"businessType":"1,2","content":"消息内容1","createTime":1450254187000,"hasLink":"0","isRead":0,"linkAddress":"www.sina.com","linkText":"新浪","newsId":"56711f5b84aea1954cade27b","newsType":"0","title":"测试1"}
 		]
-		,"isSuccess":true
 		},
+		
     "respTime":"20151130125253",
     "isSuccess":true,
     "respCode":"SUCCESS",
