@@ -954,6 +954,7 @@ Content-Length: 100
     "idNumber":"341225199005063796",//身份证
     "personal":"d500000000620995.png",//身份证正面照图片名称
     "personalBack":"b500000000620995.png",//身份证背面照图片名称
+    "realReason":"用户签名与身份证名字不符",//认证失败原因
     "respMsg":"查询成功"
 }
 ```
@@ -1028,7 +1029,8 @@ Content-Length: 100
     "companyName":"大众食品商店",//企业名称
     "business":"q500000000620995.png",//营业执照图片名称
     "regPlace":"兴华大道",//经营地址
-    "businessLicense":"5DSF5SDFS5DF",//营业执照号 
+    "businessLicense":"5DSF5SDFS5DF",//营业执照号
+    "merchantReason":"商户不行",//认证失败原因
     "respMsg":"查询成功"
 }
 ```
@@ -1106,6 +1108,7 @@ Content-Length: 100
     "name":"张三",//账户名
     "bankName":"建设银行",//银行名称
     "unionBankNo":"56SDFSD56SDF",//联行号
+    "accountReason":"账户信誉差",//认证失败原因
     "respMsg":"查询成功"
 }
 ```
@@ -1176,6 +1179,7 @@ Content-Length: 100
     "name":"张三",
     "authStatus":(0:未认证, 1:认证成功, 2:认证失败, 3:审核中),
     "signature":"s500000000620995.png",//签名图片名称
+    "signatureReason":"签名丑",//认证失败原因
     "respMsg":"查询成功"
 }
 ```
@@ -1247,6 +1251,7 @@ Content-Length: 100
     "respCode":"SUCCESS",
     "authStatus":(0:未认证, 1:认证成功, 2:认证失败, 3:审核中),
     "idCard":"id500000000620995.png",//身份证图片名称
+    "handIdCardReason":"人丑",//认证失败原因
     "respMsg":"查询成功"
 }
 ```
@@ -1327,6 +1332,7 @@ Content-Length: 100
     "bankName":"建设银行",//银行名称
     "unionBankNo":"56SDFSD56SDF",//联行号
     "bankDeposit":"建设大街19号",//开户网点
+    "accountReason":"账户信誉差",//认证失败原因
     "respMsg":"查询成功"
 }
 ```
@@ -1464,6 +1470,10 @@ Content-Length: 100
     "isSuccess":true,
     "respCode":"SUCCESS",
     "status":"1111", //认证状态 (第一位：实名认证状态, 第二位：商户认证状态, 第三位：账户认证状态, 第四位：签名认证状态)
+    "merchantReason":"商户信誉差",//商户认证失败原因
+    "realReason":"用户信誉差",//实名认证失败原因
+    "accountReason":"账户信誉差",//账户认证失败原因
+    "signatureReason":"签名丑",//签名认证失败原因
     "respMsg":"查询成功"
 }
 ```
@@ -1499,6 +1509,8 @@ Content-Length: 100
     "isSuccess":true,
     "respCode":"SUCCESS",
     "status":"11", //认证状态 (第一位：手持身份证半身照认证状态, 第二位：账户认证状态)
+    "handIdCardReason":"人丑",//手持身份证半身照认证失败原因
+    "accountReason":"账户信誉差",//账户认证失败原因
     "respMsg":"查询成功"
 }
 ```
