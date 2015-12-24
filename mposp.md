@@ -128,7 +128,7 @@ Content-Length: 100
    
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="login"></a>
 ### 登录  /login
 #### 1\. 手机号登录
@@ -162,7 +162,7 @@ Content-Length: 100
 }
 ```
 
-
+##### [返回目录↑](#content-title)
 <a id="logout"></a>
 ### 退出  /logout
 #### 1\. 退出
@@ -194,7 +194,7 @@ Content-Length: 100
     "respMsg":"退出成功."
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="register"></a>
 ### 注册  /register
 #### 1\. 通过手机号注册
@@ -229,6 +229,7 @@ Content-Length: 100
     "respMsg":"祝贺您成功注册."
 }
 ```
+##### [返回目录↑](#content-title)
 <a id="downloadFinished"></a>
 ### ICkey完成回调接口  /downloadFinished
 #### 1\. ICkey完成回调接口
@@ -260,7 +261,7 @@ Content-Length: 100
     "respMsg":"已更新状态."
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="signin"></a>
 ### 签到  /signin
 #### 1\. 签到
@@ -334,7 +335,7 @@ Content-Length: 100
 }
 
 ```
-
+##### [返回目录↑](#content-title)
 <a id="resetPassword"></a>
 ### 修改密码  /resetPassword
 #### 1\. 修改密码
@@ -369,7 +370,7 @@ Content-Length: 100
     "respMsg":"验证成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="forgetPassword"></a>
 ### 忘记密码  /forgetPassword
 #### 1\. 忘记密码
@@ -407,7 +408,7 @@ Content-Length: 100
     "respMsg":"验证成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="heartBeat"></a>
 ### 保持心跳  /heartBeat
 #### 1\. 保持心跳
@@ -439,7 +440,7 @@ Content-Length: 100
     "respMsg":"成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="transD0Amount"></a>
 ### D0当日交易剩余金额  /transD0Amount
 #### 1\. D0当日交易剩余金额
@@ -474,7 +475,7 @@ Content-Length: 100
     "respMsg":"成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="transT1Amount"></a>
 ### T1当日交易总额  /transT1Amount
 #### 1\. T1当日交易总额
@@ -507,8 +508,7 @@ Content-Length: 100
     "respMsg":"成功"
 }
 ```
-
-
+##### [返回目录↑](#content-title)
 
 <a id="transStatus"></a>
 ### 查询交易状态  /transStatus
@@ -562,7 +562,7 @@ Content-Length: 100
     "respMsg":"验证成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="transMessage"></a>
 ### 发送交易小票接口  /transMessage
 #### 1\. 发送交易小票接口
@@ -599,7 +599,7 @@ Content-Length: 100
    "respMsg":"短信发送成功,注意查收"
 }
 ```
-
+##### [返回目录↑](#content-title)
 
 <a id="queryTrans"></a>
 ### 查询接口  /queryTrans
@@ -678,7 +678,7 @@ transactions:
 "respMsg":"验证成功",
 
 ```
-
+##### [返回目录↑](#content-title)
 <a id="bankQuery"></a>
 ### 联行号查询  /bankQuery
 #### 1\. 联行号查询
@@ -721,7 +721,7 @@ Content-Length: 100
 }
 ```
 
-
+##### [返回目录↑](#content-title)
 <a id="bankList"></a>
 ### 获取18家结算银行  /bankList
 #### 1\. 获取18家结算银行
@@ -759,7 +759,7 @@ Content-Length: 100
     "respMsg":"验证成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 
 <a id="bindBankCard"></a>
 ### 绑定/解绑用户银行卡  /bindBankCard
@@ -802,7 +802,7 @@ Content-Length: 100
     "respMsg":"验证成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 
 <a id="listBandCard"></a>
 ### 获取商户绑定银行卡列表  /listBandCard
@@ -846,7 +846,7 @@ list:[
 }]
 ]
 ```
-
+##### [返回目录↑](#content-title)
 <a id="activeAndBindEquip"></a>
 ### 激活绑定设备  /activeAndBindEquip
 #### 1\. 激活绑定设备
@@ -883,7 +883,7 @@ Content-Length: 100
     "respMsg":"激活绑定设备成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="realNameAuth"></a>
 ### 实名认证  /realNameAuth
 #### 1\. 实名认证
@@ -919,7 +919,7 @@ Content-Length: 100
     "respMsg":"实名认证信息已提交,请耐心等待"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="realNameAuthStatus"></a>
 ### 实名认证信息回显  /realNameAuthStatus
 #### 1\. 实名认证信息回显
@@ -958,7 +958,7 @@ Content-Length: 100
     "respMsg":"查询成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="merchantAuth"></a>
 ### 商户认证  /merchantAuth
 #### 1\. 商户认证
@@ -995,7 +995,7 @@ Content-Length: 100
     "respMsg":"商户认证信息已提交,请耐心等待"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="merchantAuthStatus"></a>
 ### 商户认证信息回显  /merchantAuthStatus
 #### 1\. 商户认证信息回显
@@ -1034,7 +1034,7 @@ Content-Length: 100
     "respMsg":"查询成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="accountAuth"></a>
 ### 账户认证  /accountAuth
 #### 1\. 账户认证
@@ -1072,7 +1072,7 @@ Content-Length: 100
     "respMsg":"账户认证信息已提交,请耐心等待"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="accountAuthStatus"></a>
 ### 账户认证信息回显  /accountAuthStatus
 #### 1\. 账户认证信息回显
@@ -1112,7 +1112,7 @@ Content-Length: 100
     "respMsg":"查询成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="signatureAuth"></a>
 ### 签名认证  /signatureAuth
 #### 1\. 签名认证
@@ -1146,7 +1146,7 @@ Content-Length: 100
     "respMsg":"签名认证信息已提交,请耐心等待"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="signatureAuthStatus"></a>
 ### 签名认证信息回显  /signatureAuthStatus
 #### 1\. 签名认证信息回显
@@ -1183,7 +1183,7 @@ Content-Length: 100
     "respMsg":"查询成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="handIdCardAuth"></a>
 ### 及时付身份证认证  /handIdCardAuth
 #### 1\. 及时付身份证认证
@@ -1218,7 +1218,7 @@ Content-Length: 100
     "respMsg":"手持身份证半身照认证信息已提交,请耐心等待"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="handIdCardAuthStatus"></a>
 ### 及时付身份证认证信息回显  /handIdCardAuthStatus
 #### 1\. 及时付身份证认证信息回显
@@ -1255,7 +1255,7 @@ Content-Length: 100
     "respMsg":"查询成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="dzAccountAuth"></a>
 ### 及时付账户照认证  /dzAccountAuth
 #### 1\. 及时付账户照认证
@@ -1294,7 +1294,7 @@ Content-Length: 100
     "respMsg":"账户认证信息已提交,请耐心等待"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="dzAccountAuthStatus"></a>
 ### 及时付账户认证信息回显  /dzAccountAuthStatus
 #### 1\. 及时付账户认证信息回显
@@ -1336,7 +1336,7 @@ Content-Length: 100
     "respMsg":"查询成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="sale"></a>
 ### 消费  /sale
 #### 1\. 消费
@@ -1393,6 +1393,7 @@ Content-Length: 100
     "script":"ic55"
 }
 ```
+##### [返回目录↑](#content-title)
 <a id="query"></a>
 ### 余额查询  /query
 #### 1\. 余额查询
@@ -1438,7 +1439,7 @@ Content-Length: 100
     "script":"ic55"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="authStatus"></a>
 ### 四审认证状态查询  /authStatus
 #### 1\. 四审认证状态查询
@@ -1477,7 +1478,7 @@ Content-Length: 100
     "respMsg":"查询成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="dzAuthStatus"></a>
 ### 及时付认证状态查询  /dzAuthStatus
 #### 1\. 及时付认证状态查询
@@ -1515,7 +1516,7 @@ Content-Length: 100
 }
 ```
 
-
+##### [返回目录↑](#content-title)
 <a id="downloadImg"></a>
 ### 认证图片下载  /downloadImg
 #### 1\. 认证图片下载
@@ -1553,7 +1554,7 @@ Content-Length: 100
 }
 ```
 
-
+##### [返回目录↑](#content-title)
 <a id="transNotify"></a>
 ### IC回调  /transNotify
 #### 1\. IC回调
@@ -1593,7 +1594,7 @@ Content-Length: 100
     "respMsg":"查询成功"
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="swiperChange"></a>
 ### 更换设备  /swiperChange
 #### 1\. 更换设备
@@ -1631,7 +1632,7 @@ Content-Length: 100
 }
 ```
 
-
+##### [返回目录↑](#content-title)
 <a id="showHtml"></a>
 ### 静态页面显示  /showHtml
 #### 1\. 静态页面显示
@@ -1662,7 +1663,7 @@ Content-Length: 100
 	HTML页面
 }
 ```
-
+##### [返回目录↑](#content-title)
 <a id="message"></a>
 ### 获取消息接口/更新消息状态  /message
 #### 1\. 获取消息接口/更新消息状态
