@@ -575,6 +575,9 @@ Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
 amount: "11111"
+terminalNo: "44444"
+merchantNo: "2333"
+batchNo: "12"
 reqNo: "1111"
 mobile: "13500001111"
 origReqTime: "20151124111059"
