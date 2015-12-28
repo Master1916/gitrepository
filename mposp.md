@@ -140,11 +140,11 @@ Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
 Content-Length: 30
 
-
-    "loginName": "张珊",
-    "password": "123456",
-    "position": "117.194778,39.113809",
-    "appVersion": "ios.未知.1.1.813"
+"position": "116.379062,39.97077"
+"password": "qqqqqq"
+"appVersion": "android.ZFT.1.2.143"
+"loginName": "18911156118"
+"reqTime": "20151228143806"
 
 ```
 响应：  
@@ -158,7 +158,13 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
-  
+    "respTime": "20151228143800",
+    "isSuccess": true,
+    "respCode": "SUCCESS",
+    "respMsg": "登录成功",
+    "isMobileMerchant": true, //是否为手机商户
+    "isPosMerchant": false, //是否为POS商户
+    "posStatus": 0 //POS认证状态 (0未绑定 ,1待刷卡，2待认证,3实名认证通过)
 }
 ```
 
@@ -958,6 +964,8 @@ Content-Length: 100
     "personal":"d500000000620995.png",//身份证正面照图片名称
     "personalBack":"b500000000620995.png",//身份证背面照图片名称
     "realReason":"用户签名与身份证名字不符",//认证失败原因
+    "idCard":"341225199005063796",//仅当为POS商户时返回
+    "realName":"张三",仅当为POS商户时返回
     "respMsg":"查询成功"
 }
 ```
