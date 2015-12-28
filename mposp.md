@@ -294,50 +294,51 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
-"respTime":"20151207175425",
-"isSuccess":true,
-"respCode":"SUCCESS",
-"respMsg":"签到成功",
-"respNo": "111"
-"businessT1":
-	{
-		"isMerchantT1":true,
-		"info":
-			{
-				"status":"1211",
-				"name":"王鹏",
-				"cardTail":"3333",
-				"ksnNo":"7000100000000722",
-				"bluetoothName":"AC041903",
-				"serialType":"0.78",
-				"nextReqNo":11,
-				"feeRate":"0.78"
-			},
-		"key":
-			{
-				"keyType":"3DES",
-				"keyValue":"FCB72240C0F7F0A34B9F7385EC728553",
-				"checkValue":"56BAD632",
-				"isBluetooth":true,
-				"macAddress":"8C:DE:52:48:AD:C2"
-			}
-	},
-"agencyTrade":true,
-"businessT0":
-	{
-		"isMerchantT0":true,
-		"info":
-			{
-				"merchantTradeStatus":"1",
-				"accountD0Status":"1",
-				"reasonType":"1",
-				"failReason":"呜呜呜呜",
-				"merchantFeeRate":"0.5"
-			},
-		"isHoliday":false,
-		"startTime":1449425103000,
-		"endTime":1449497227000
-	}
+    "respTime": "20151228155553",
+    "isSuccess": true,
+    "respCode": "SUCCESS",
+    "respMsg": "签到成功",
+    "businessT1":     {
+        "isMerchantT1": true,
+        "info":         {
+            "status": "1111",
+            "name": "沈陈",
+            "cardTail": "2371",
+            "bluetoothName": "MPOS5093000113",
+            "serialType": "0.78--26",
+            "merchantReason": "",
+            "realReason": "",
+            "signatureReason": "",
+            "accountReason": "",
+            "feeRate": "0.78~26"
+        }
+    },
+    "model": "dh-103",
+    "needUpdateIC": false,
+    "device":     {
+        "keyType": "3DES",
+        "keyValue": "BF820AAA6F5407579EB76817B50721D6",
+        "checkValue": "EF95B52C",
+        "pinKeyType": "RSA",
+        "pinKeyValue": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhF3+leaXzmmTzZNua2xv+k2/Z76cFIQ13XfSrXgNuGArnlyKUZR7z6zjGbtEG2u/JH9MDJOADlsn9HsGie9YvXvuUv7I0OhUB6MSWnofyJTBuXhDCHzrQveVtX26HbduQELvfduZOBmPMgC5vFxnnhFcYQn9ns9onR8mk+uy6/hgmWNeNHjhwgr/kbeuOTRiw6gtChnuPcOITpIb2eYfiK/a3+30teuCalXJZwXO30VtcUaaL69luLIofIGH9Lu4wClrxHoostCE5Anc/1qJbWsNGXmXHYTNw6vv7wasMSPPyf6OqmaeuTx/GLaxrWtUAVPEylbTDI3z6EycfkrThwIDAQAB",
+        "isBluetooth": true,
+        "macAddress": "00:0C:BF:0C:92:16",
+        "ksnNo": "850093000113"
+    },
+    "agencyTrade": true,
+    "traceNo": 80,
+    "businessD0":     {
+        "isMerchantD0": true,
+        "isHoliday": false,
+        "startTime": 1451239503000,
+        "endTime": 1451311627000,
+        "info":         {
+            "merchantTradeStatus": 3,
+            "accountD0Status": 1,
+            "merchantFeeRate": "0.78~26",
+            "merchantAddFeeRate": "0"
+        }
+    }
 }
 
 ```
