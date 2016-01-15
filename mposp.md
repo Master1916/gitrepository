@@ -94,6 +94,7 @@ HTTP/1.1 403 Forbidden
 | 更换设备 | [/swiperChange](#swiperChange)                      | urlencoded           | POST   | 李飞     | 是   |
 | 静态页面显示 | [/showHtml](#showHtml)                      | urlencoded           | GET   | 李飞     | 否   |
 | 获取消息接口/更新消息状态 | [/message](#message)                      | urlencoded           | GET   | 李飞     | 否   |
+| 获取广告位信息 | [/banner](#banner)                      | urlencoded           | GET   | 张树彬     | 否   |
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
 ### 获取验证码  /sendMobileMessage
@@ -1718,5 +1719,69 @@ Content-Length: 100
     "isSuccess":true,
     "respCode":"SUCCESS",
     "respMsg":"查询成功"
+}
+```
+
+##### [返回目录↑](#content-title)
+<a id="banner"></a>
+### 获取广告位信息  /banner
+#### 1\. 获取广告位信息
+请求：  
+```
+GET /message HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion : ios.ZFT.1.1.813
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "respTime": "20160115104632", 
+    "isSuccess": true, 
+    "respCode": "SUCCESS", 
+    "respMsg": "成功", 
+    "head": {
+        "total": "4"
+    }, 
+    "body": [
+        {
+            "title": "广告位1", 
+            "message": "广告信息1", 
+            "imageUrl": "http://image.21er.tk/1.jpg", 
+            "targetUrl": "http://image.21er.tk/11.jpg"
+        }, 
+        {
+            "title": "广告位2", 
+            "message": "广告信息2", 
+            "imageUrl": "http://image.21er.tk/2.jpg", 
+            "targetUrl": "http://image.21er.tk/21.jpg"
+        }, 
+        {
+            "title": "广告位3", 
+            "message": "广告信息3", 
+            "imageUrl": "http://image.21er.tk/3.jpg", 
+            "targetUrl": "http://image.21er.tk/31.jpg"
+        }, 
+        {
+            "title": "广告位4", 
+            "message": "广告信息4", 
+            "imageUrl": "http://image.21er.tk/4.jpg", 
+            "targetUrl": "http://image.21er.tk/41.jpg"
+        }
+    ]
 }
 ```
