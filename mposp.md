@@ -1761,8 +1761,8 @@ Content-Length: 100
         {
             "title": "广告位1", 
             "message": "广告信息1", 
-            "imageUrl": "http://image.21er.tk/1.jpg", 
-            "targetUrl": "http://image.21er.tk/11.jpg"
+            "imageUrl": "http://image.21er.tk/1.jpg",  //图片路径
+            "targetUrl": "http://image.21er.tk/11.jpg" //图片跳转的路径
         }, 
         {
             "title": "广告位2", 
