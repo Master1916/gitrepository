@@ -1270,8 +1270,8 @@ Content-Length: 100
 ```
 ##### [返回目录↑](#content-title)
 <a id="dzAccountAuth"></a>
-### 及时付账户照认证  /dzAccountAuth
-#### 1\. 及时付账户照认证
+### 及时付账户认证  /dzAccountAuth
+#### 1\. 及时付账户认证
 请求：  
 ```
 POST /dzAccountAuth HTTP/1.1
