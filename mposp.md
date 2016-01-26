@@ -93,6 +93,7 @@ HTTP/1.1 403 Forbidden
 | IC回调 | [/transNotify](#transNotify)                      | urlencoded           | POST   | 张树彬     | 是   |
 | 更换设备 | [/swiperChange](#swiperChange)                      | urlencoded           | POST   | 李飞     | 是   |
 | 静态页面显示 | [/showHtml](#showHtml)                      | urlencoded           | GET   | 李飞     | 否   |
+| 需要登录页面显示 | [/showProtocol](#showProtocol)                      | urlencoded           | GET   | 李飞     | 是   |
 | 获取消息接口/更新消息状态 | [/message](#message)                      | urlencoded           | GET   | 李飞     | 否   |
 | 获取广告位信息 | [/banner](#banner)                      | urlencoded           | GET   | 张树彬     | 否   |
 ----------------------------------------------------------------------------------
@@ -1677,6 +1678,39 @@ Content-Length: 100
 }
 ```
 ##### [返回目录↑](#content-title)
+
+<a id="showProtocol"></a>
+### 需要登录页面显示  /showProtocol
+#### 1\. 需要登录页面显示
+请求：  
+```
+GET /showProtocol HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+view: "XXX" //offline_product_protocol
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+	HTML页面
+}
+```
+##### [返回目录↑](#content-title)
+
 <a id="message"></a>
 ### 获取消息接口/更新消息状态  /message
 #### 1\. 获取消息接口/更新消息状态
@@ -1723,6 +1757,7 @@ Content-Length: 100
 ```
 
 ##### [返回目录↑](#content-title)
+
 <a id="banner"></a>
 ### 获取广告位信息  /banner
 #### 1\. 获取广告位信息
