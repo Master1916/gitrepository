@@ -297,50 +297,49 @@ Cache-Control: no-cache
 Content-Length: 100
 
 {
-    "respTime": "20151228155553",
-    "isSuccess": true,
-    "respCode": "SUCCESS",
-    "respMsg": "签到成功",
-    "businessT1":     {
-        "isMerchantT1": true,
-        "info":         {
-            "status": "1111",
-            "name": "沈陈",
-            "cardTail": "2371",
-            "bluetoothName": "MPOS5093000113",
-            "serialType": "0.78--26",
-            "merchantReason": "",
-            "realReason": "",
-            "signatureReason": "",
-            "accountReason": "",
+    "respTime": "20160308185017", 
+    "isSuccess": true, 
+    "respCode": "SUCCESS", 
+    "respMsg": "签到成功", 
+    "businessT1": {
+        "isMerchantT1": true, 
+        "info": {
+            "status": "1111", 
+            "name": "橡树斌", 
+            "cardTail": "2333", 
+            "bluetoothName": "AC079158", 
+            "serialType": "0.78--26", 
+            "merchantReason": "", 
+            "realReason": "", 
+            "signatureReason": "", 
+            "accountReason": "", 
             "feeRate": "0.78~26"
         }
-    },
-    "model": "dh-103",
-    "needUpdateIC": false,
-    "device":     {
-        "keyType": "3DES",
-        "keyValue": "BF820AAA6F5407579EB76817B50721D6",
-        "checkValue": "EF95B52C",
-        "pinKeyType": "RSA",
-        "pinKeyValue": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAhF3+leaXzmmTzZNua2xv+k2/Z76cFIQ13XfSrXgNuGArnlyKUZR7z6zjGbtEG2u/JH9MDJOADlsn9HsGie9YvXvuUv7I0OhUB6MSWnofyJTBuXhDCHzrQveVtX26HbduQELvfduZOBmPMgC5vFxnnhFcYQn9ns9onR8mk+uy6/hgmWNeNHjhwgr/kbeuOTRiw6gtChnuPcOITpIb2eYfiK/a3+30teuCalXJZwXO30VtcUaaL69luLIofIGH9Lu4wClrxHoostCE5Anc/1qJbWsNGXmXHYTNw6vv7wasMSPPyf6OqmaeuTx/GLaxrWtUAVPEylbTDI3z6EycfkrThwIDAQAB",
-        "isBluetooth": true,
-        "macAddress": "00:0C:BF:0C:92:16",
-        "ksnNo": "850093000113"
-    },
-    "agencyTrade": true,
-    "traceNo": 80,
-    "businessD0":     {
-        "isMerchantD0": true,
-        "isHoliday": false,
-        "startTime": 1451239503000,
-        "endTime": 1451311627000,
-        "info":         {
-            "merchantTradeStatus": 3,
-            "accountD0Status": 1,
-            "merchantFeeRate": "0.78~26",
+    }, 
+    "model": "itron15-9", 
+    "needUpdateIC": false, 
+    "device": {
+        "keyType": "3DES", 
+        "keyValue": "7806C6F5AEF0F01160F11390F9B97EFD", 
+        "checkValue": "C086F687", 
+        "isBluetooth": true, 
+        "macAddress": "8C:DE:52:C3:51:0D", 
+        "ksnNo": "7000100000008177"
+    }, 
+    "agencyTrade": true, 
+    "traceNo": 20, 
+    "businessD0": {
+        "isMerchantD0": true, 
+        "isHoliday": false, 
+        "startTime": 1457373903000, 
+        "endTime": 1457446027000, 
+        "info": {
+            "merchantTradeStatus": 1, 
+            "accountD0Status": 1, 
+            "merchantFeeRate": "0.78~26", 
             "merchantAddFeeRate": "0"
-        }
+        }, 
+        "d0SecondFeeRate": 0.49 //d0秒到商户费率
     }
 }
 
