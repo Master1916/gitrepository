@@ -339,7 +339,8 @@ Content-Length: 100
             "merchantFeeRate": "0.78~26", 
             "merchantAddFeeRate": "0"
         }, 
-        "d0SecondFeeRate": 0.49 //d0秒到商户费率
+        "d0SecondFeeRate": 0.49, //d0秒到商户费率
+        "d0SecondMinSettleAmount": 900000 //d0秒到商户单笔最低限额(单位：分)
     }
 }
 
