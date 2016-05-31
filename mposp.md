@@ -304,6 +304,7 @@ Content-Length: 100
     "businessT1": {
         "isMerchantT1": true, 
         "info": {
+            "T1AuthFirstPass" : 1;
             "status": "1111", 
             "name": "橡树斌", 
             "cardTail": "2333", 
