@@ -60,13 +60,15 @@ HTTP/1.1 403 Forbidden
 | 注册| [/register](#register)                      | urlencoded           | POST   |  李飞     | 否   |
 | 签到| [/signin](#signin)                      | urlencoded           | POST   | 李飞     | 是   |
 | 保持心跳| [/heartBeat](#heartBeat)                      | urlencoded           | POST   | 李飞     | 是   |
-| D0当日交易剩余金额 | [/transD0Amount](#transD0Amount)                      | urlencoded           | GET   | 李飞     | 是   |
+| D0当日交易剩余金额 | [/transD0Amount](#transD0Amount)                      | urlencoded           | GET   | 李飞     | 否   |
+| 获取强制更新的参数 | [/getForceUpdate](#getForceUpdate)    | urlencoded           | GET   | 李飞     | 否   |
 | T1当日交易总额 | [/transT1Amount](#transT1Amount)                      | urlencoded           | GET   | 李飞     | 是   |
 | ICkey回调接口| [/downloadFinished](#downloadFinished)                      | urlencoded           | POST   | 李飞     | 是   |
 | 修改密码| [/resetPassword](#resetPassword)                      | urlencoded           | POST   | 李飞     | 是   |
 | 忘记密码| [/forgetPassword](#forgetPassword)                      | urlencoded           | POST   | 李飞     | 否   |
 | 查询交易状态| [/transStatus](#transStatus)                      | urlencoded           | POST   | 李飞     | 是   |
 | 发送交易小票接口| [/transMessage](#transMessage)                      | urlencoded           | POST   | 李飞     | 是   |
+| 根据交易卡类型计算手续费| [/getHandlingCharge](#getHandlingCharge) | urlencoded           | POST   | 李飞     | 是   |
 | 查询交易| [/queryTrans](#queryTrans)                      | urlencoded           | GET   | 李飞     | 是   |
 | 联行号查询| [/bankQuery](#bankQuery)                      | urlencoded           | GET   | 李飞     | 否   |
 | 获取18家结算银行| [/bankList](#bankList)                      | urlencoded           | GET   | 李飞     | 否   |
@@ -167,6 +169,7 @@ Content-Length: 100
     "respMsg": "登录成功",
     "isMobileMerchant": true, //是否为手机商户
     "isPosMerchant": false, //是否为POS商户
+    "toast": false, //IOS平台版本更新toast控制参数
     "posStatus": 0 //POS认证状态 (0未绑定 ,1待刷卡，2待认证,3实名认证通过)
 }
 ```
@@ -453,6 +456,40 @@ Content-Length: 100
 }
 ```
 ##### [返回目录↑](#content-title)
+
+
+<a id="getForceUpdate"></a>
+### 获取强制更新的参数  /getForceUpdate
+#### 1\. 获取强制更新的参数
+请求：  
+```
+GET /getForceUpdate HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+    "forceUpdate":false,//强制更新参数
+    "respTime":"20151130125253",
+    "isSuccess":true,
+}
+```
+##### [返回目录↑](#content-title)
+
 <a id="transD0Amount"></a>
 ### D0当日交易剩余金额  /transD0Amount
 #### 1\. D0当日交易剩余金额
@@ -1682,6 +1719,45 @@ Content-Length: 100
 }
 ```
 ##### [返回目录↑](#content-title)
+
+<a id="getHandlingCharge"></a>
+### 根据交易卡类型计算手续费  /getHandlingCharge
+#### 1\. 根据交易卡类型计算手续费
+请求：  
+```
+POST /getHandlingCharge HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+amount: "11111" //单位 分
+type: 1 //t1：1 DO：2
+card: "622600910049140997" //卡号
+
+
+```
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+   "respTime":"20151125161740",
+   "isSuccess":true,
+   "respCode":"SUCCESS",
+   "respMsg":"获取成功",
+   "handlingCharge": 2000 //手续费 分为单位
+}
+```
+##### [返回目录↑](#content-title)
+
 
 <a id="showProtocol"></a>
 ### 需要登录页面显示  /showProtocol
