@@ -165,7 +165,7 @@ Content-Length: 100
 {
     "respTime": "20151228143800",
     "isSuccess": true,
-    "respCode": "SUCCESS",
+    "respCode": "SUCCESS",//当有新版本需要更新的商户返回特殊code ： UPGRADE_SYSTEM
     "respMsg": "登录成功",
     "isMobileMerchant": true, //是否为手机商户
     "isPosMerchant": false, //是否为POS商户
