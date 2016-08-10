@@ -169,7 +169,6 @@ Content-Length: 100
     "respMsg": "登录成功",
     "isMobileMerchant": true, //是否为手机商户
     "isPosMerchant": false, //是否为POS商户
-    "toast": false, //IOS平台版本更新toast控制参数
     "posStatus": 0 //POS认证状态 (0未绑定 ,1待刷卡，2待认证,3实名认证通过)
 }
 ```
@@ -484,6 +483,7 @@ Content-Length: 100
 
 {
     "forceUpdate":false,//强制更新参数
+    "minVersion":'1.2.126',//IOS最低版本
     "respTime":"20151130125253",
     "isSuccess":true,
 }
