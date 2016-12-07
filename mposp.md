@@ -99,7 +99,7 @@ HTTP/1.1 403 Forbidden
 | 获取消息接口/更新消息状态 | [/message](#message)                      | urlencoded           | GET   | 李飞     | 否   |
 | 获取广告位信息 | [/banner](#banner)                      | urlencoded           | GET   | 张树彬     | 否   |
 | 广告位图片下载 | [/downloadBanner](#downloadBanner)                      | urlencoded           | GET   | 张树彬     | 否   |
-| 客户绑定银行卡发送短息 | [/sendCustomerMessage](#sendCustomerMessage)     | urlencoded           | POST  | 张攀攀    | 否   |
+| 客户绑定银行卡发送短息 | [/sendCustomerMessage](#sendCustomerMessage)                      | urlencoded           | POST   | 张攀攀     | 否   |
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
 ### 获取验证码  /sendMobileMessage
