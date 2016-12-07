@@ -99,6 +99,7 @@ HTTP/1.1 403 Forbidden
 | 获取消息接口/更新消息状态 | [/message](#message)                      | urlencoded           | GET   | 李飞     | 否   |
 | 获取广告位信息 | [/banner](#banner)                      | urlencoded           | GET   | 张树彬     | 否   |
 | 广告位图片下载 | [/downloadBanner](#downloadBanner)                      | urlencoded           | GET   | 张树彬     | 否   |
+| 客户绑定银行卡发送短息 | [/sendCustomerMessage](#sendCustomerMessage)     | urlencoded           | POST  | 张攀攀    | 否   |
 ----------------------------------------------------------------------------------
 <a id="sendMobileMessage"></a>
 ### 获取验证码  /sendMobileMessage
@@ -1933,3 +1934,47 @@ Content-Length: 100
     字节流
 }
 ```
+
+
+<a id="sendCustomerMessage"></a>
+### 客户绑定银行卡发送短信验证码 /sendCustomerMessage
+#### 1\. 客户绑定银行卡发送短信验证码
+请求：  
+```
+GET /downloadImg HTTP/1.1
+Host: mposp.21er.tk
+Date: Thu, 03 Dec 2015 10:22:53
+Content-Type: application/x-www-form-urlencoded; charset=utf-8
+Content-Length: 30
+
+appVersion: "ios.未知.1.1.813"
+accountName: "川普" //客户名字
+idNumber：    "370819198876765434" //客户身份证号
+mobile:       "15866756879" //客户手机号
+bankCard:     "6222020409010256801"//客户银行卡号
+
+```
+
+响应： 
+
+```
+HTTP/1.1 200 OK
+Server: Nginx
+Date: Thu, 09 Apr 2015 11:36:53 GMT
+Content-Type: application/json; charset=utf-8
+Connection: keep-alive
+Cache-Control: no-cache
+Content-Length: 100
+
+{
+"respTime":"20161207101037",
+"isSuccess":true,
+"respCode":"SUCCESS",
+"respMsg":"发送成功"
+}
+
+```
+
+
+
+
