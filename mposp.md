@@ -1942,7 +1942,7 @@ Content-Length: 100
 #### 1\. 客户绑定银行卡发送短信验证码
 请求：  
 ```
-GET /downloadImg HTTP/1.1
+POST /sendCustomerMessage HTTP/1.1
 Host: mposp.21er.tk
 Date: Thu, 03 Dec 2015 10:22:53
 Content-Type: application/x-www-form-urlencoded; charset=utf-8
